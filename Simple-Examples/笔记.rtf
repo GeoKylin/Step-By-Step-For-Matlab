@@ -1,0 +1,818 @@
+{\rtf1\ansi\ansicpg936\deff0\nouicompat\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset1 Segoe UI Symbol;}{\f2\fnil\fcharset161 Calibri;}{\f3\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 6.3.9600}{\*\mmathPr\mmathFont3\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang2052 Mathematica\'ca\'c7\'d2\'bb\'bf\'ee\'bf\'c6\'d1\'a7\'bc\'c6\'cb\'e3\'c8\'ed\'bc\'fe\'a3\'ac\'ba\'dc\'ba\'c3\'b5\'d8\'bd\'e1\'ba\'cf\'c1\'cb\'ca\'fd\'d6\'b5\'ba\'cd\'b7\'fb\'ba\'c5\'bc\'c6\'cb\'e3\'d2\'fd\'c7\'e6\'a1\'a2\'cd\'bc\'d0\'ce\'cf\'b5\'cd\'b3\'a1\'a2\'b1\'e0\'b3\'cc\'d3\'ef\'d1\'d4\'a1\'a2\'ce\'c4\'b1\'be\'cf\'b5\'cd\'b3\'a1\'a2\'ba\'cd\'d3\'eb\'c6\'e4\'cb\'fb\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'b8\'df\'bc\'b6\'c1\'ac\'bd\'d3\'a1\'a3\'ba\'dc\'b6\'e0\'b9\'a6\'c4\'dc\'d4\'da\'cf\'e0\'d3\'a6\'c1\'ec\'d3\'f2\'c4\'da\'b4\'a6\'d3\'da\'ca\'c0\'bd\'e7\'c1\'ec\'cf\'c8\'b5\'d8\'ce\'bb\'a3\'ac\'cb\'fc\'d2\'b2\'ca\'c7\'ca\'b9\'d3\'c3\'d7\'ee\'b9\'e3\'b7\'ba\'b5\'c4\'ca\'fd\'d1\'a7\'c8\'ed\'bc\'fe\'d6\'ae\'d2\'bb\'a1\'a3Mathematica\'b5\'c4\'b7\'a2\'b2\'bc\'b1\'ea\'d6\'be\'d7\'c5\'cf\'d6\'b4\'fa\'bf\'c6\'bc\'bc\'bc\'c6\'cb\'e3\'b5\'c4\'bf\'aa\'ca\'bc\'a1\'a3Mathematica\'ca\'c7\'ca\'c0\'bd\'e7\'c9\'cf\'cd\'a8\'d3\'c3\'bc\'c6\'cb\'e3\'cf\'b5\'cd\'b3\'d6\'d0\'d7\'ee\'c7\'bf\'b4\'f3\'b5\'c4\'cf\'b5\'cd\'b3\'a1\'a3\'d7\'d4\'b4\'d31988\'b7\'a2\'b2\'bc\'d2\'d4\'c0\'b4\'a3\'ac\'cb\'fc\'d2\'d1\'be\'ad\'b6\'d4\'c8\'e7\'ba\'ce\'d4\'da\'bf\'c6\'bc\'bc\'ba\'cd\'c6\'e4\'cb\'fc\'c1\'ec\'d3\'f2\'d4\'cb\'d3\'c3\'bc\'c6\'cb\'e3\'bb\'fa\'b2\'fa\'c9\'fa\'c1\'cb\'c9\'ee\'bf\'cc\'b5\'c4\'d3\'b0\'cf\'ec\'a1\'a3\par
+Mathematica\'ba\'cdMATLAB\'a1\'a2Maple\'b2\'a2\'b3\'c6\'ce\'aa\'c8\'fd\'b4\'f3\'ca\'fd\'d1\'a7\'c8\'ed\'bc\'fe\'a1\'a3\par
+\'c8\'ed\'bc\'fe\'c3\'fb\'b3\'c6Mathematica\par
+\'bf\'aa\'b7\'a2\'c9\'cc\'ca\'b7\'b5\'d9\'b7\'d2\lang1033\'a1\'a4\'ce\'d6\'b6\'fb\'b7\'f2\'c0\'d5\'c4\'b7\'b3\'c9\'d4\'b1\par
+\'c8\'ed\'bc\'fe\'c6\'bd\'cc\'a8Windows\'a3\'acMac OS\'a3\'acLinux\par
+\'c8\'ed\'bc\'fe\'d3\'ef\'d1\'d4\'d3\'a2\'ce\'c4\'a3\'ac\'d6\'d0\'ce\'c4\'a3\'ac\'c8\'d5\'ce\'c4\par
+\'c8\'ed\'bc\'fe\'ca\'da\'c8\'a8\'d7\'a8\'d3\'d0\par
+\'c0\'e0    \'b1\'f0\'bd\'cc\'d1\'a7\'c8\'ed\'bc\'fe\par
+\'c4\'bf\'c2\'bc\par
+1\'c0\'fa\'ca\'b7\par
+2\'d3\'b0\'cf\'ec\par
+3\'bf\'aa\'b7\'a2\'b9\'a4\'d7\'f7\par
+4\'b8\'df\'d0\'d4\'c4\'dc\'bc\'c6\'cb\'e3\par
+5\'bd\'e7\'c3\'e6\par
+6\'b2\'fa\'c6\'b7\'b9\'a6\'c4\'dc\par
+\f1\u9642?\f0  \'bb\'f9\'b1\'be\'d4\'cb\'cb\'e3\par
+\f1\u9642?\f0  \'b3\'a3\'d3\'c3\'ca\'fd\'d1\'a7\'ba\'af\'ca\'fd\par
+\f1\u9642?\f0  \'ca\'fd\'d6\'b5\'c9\'e8\'b6\'a8\par
+\f1\u9642?\f0  \'cb\'c4\'b8\'f6\'b4\'a6\'c0\'ed\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  \'b6\'e0\'cf\'ee\'ca\'bd\'d7\'aa\'bb\'bb\par
+\f1\u9642?\f0  \'b7\'d6\'c4\'b8\'b7\'d6\'d7\'d3\'d4\'cb\'cb\'e3\par
+\f1\u9642?\f0  \'d7\'aa\'bb\'bb\'ba\'af\'ca\'fd\par
+\f1\u9642?\f0  \'ba\'af\'ca\'fd\'d6\'b8\'ca\'fd\'d4\'cb\'cb\'e3\par
+\f1\u9642?\f0  \'b4\'ce\'b7\'bd\'b3\'cb\'bb\'fd\par
+\f1\u9642?\f0  \'cf\'b5\'ca\'fd\'d7\'ee\'b8\'df\'b4\'ce\'b7\'bd\par
+\f1\u9642?\f0  \'b4\'fa\'bb\'bb\'d4\'cb\'cb\'e3\'d7\'d3\par
+\f1\u9642?\f0  \'c7\'f3\'bd\'e2\'b7\'bd\'b3\'cc\'ca\'bd\par
+\f1\u9642?\f0  \'cb\'c4\'d6\'d6\'c0\'a8\'ba\'c5\par
+\f1\u9642?\f0  \'cb\'f5\'b6\'cc\'ca\'e4\'b3\'f6\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  \'b2\'e9\'d1\'af\'ce\'ef\'bc\'fe\par
+\f1\u9642?\f0  \'b6\'a8\'d2\'e5\'b2\'e9\'d1\'af\'c7\'e5\'b3\'fd\par
+\f1\u9642?\f0  If\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  \'bc\'ab\'cf\'de\par
+\f1\u9642?\f0  \'ce\'a2\'b7\'d6\par
+\f1\u9642?\f0  \'c8\'ab\'ce\'a2\'b7\'d6\par
+\f1\u9642?\f0  \'b2\'bb\'b6\'a8\'bb\'fd\'b7\'d6\par
+\f1\u9642?\f0  \'b6\'a8\'bb\'fd\'b7\'d6\par
+\f1\u9642?\f0  \'c1\'d0\'d6\'ae\'ba\'cd\'d3\'eb\'bb\'fd\par
+\f1\u9642?\f0  \'cc\'a9\'c0\'d5\'d5\'b9\'bf\'aa\'ca\'bd\par
+\f1\u9642?\f0  \'c2\'df\'bc\'ad\'d4\'cb\'cb\'e3\'d7\'d3\par
+\f1\u9642?\f0  \'b6\'fe\'ce\'ac\'bb\'e6\'cd\'bc\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  Plot\'bc\'b8\'d6\'d6\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  \'b4\'ae\'c1\'d0\'bb\'e6\'cd\'bc\par
+\f1\u9642?\f0  \'bb\'e6\'cd\'bc\'d1\'d5\'c9\'ab\'d6\'b8\'b6\'a8\par
+\f1\u9642?\f0  \'b2\'ca\'c9\'ab\'bb\'e6\'cd\'bc\par
+\f1\u9642?\f0  \'cd\'bc\'d0\'ce\'b4\'a6\'c0\'ed\'d6\'b8\'c1\'ee\par
+\f1\u9642?\f0  \'cd\'bc\'d0\'ce\'d6\'ae\'c5\'c5\'c1\'d0\par
+\f1\u9642?\f0  \'b5\'c8\'b8\'df\'cf\'df\'cd\'bc\par
+7\'c0\'fa\'ca\'b7\'b0\'e6\'b1\'be\par
+\f1\u9642?\f0  Mathematica 10.0.2 2014\par
+\f1\u9642?\f0  Mathematica 10.0.1 2014\par
+\f1\u9642?\f0  Mathematica 10.0.0 2014\par
+\f1\u9642?\f0  Mathematica9.0.1 2013\par
+\f1\u9642?\f0  Mathematica9.0.0 2012\par
+\f1\u9642?\f0  Mathematica8.0.4 2011\par
+\f1\u9642?\f0  Mathematica8.0.1 2011\par
+\f1\u9642?\f0  Mathematica8.0 2010\par
+\f1\u9642?\f0  Mathematica7.0.1 2009\par
+\f1\u9642?\f0  Mathematica7.0 2008\par
+\f1\u9642?\f0  Mathematica6.0.3 2008\par
+\f1\u9642?\f0  Mathematica6.0.2 2008\par
+\f1\u9642?\f0  Mathematica6.0.1 2008\par
+\f1\u9642?\f0  Mathematica6.0 2007\par
+\f1\u9642?\f0  Mathematica5.2 2005\par
+\f1\u9642?\f0  Mathematica5.1 2004\par
+\f1\u9642?\f0  Mathematica5.0 2003\par
+\f1\u9642?\f0  Mathematica4.2 2002\par
+\f1\u9642?\f0  Mathematica4.1 2000\par
+\f1\u9642?\f0  Mathematica4.0 1999\par
+\f1\u9642?\f0  Mathematica3.0 1996\par
+\f1\u9642?\f0  Mathematica2.2 1993\par
+\f1\u9642?\f0  Mathematica2.1 1992\par
+\f1\u9642?\f0  Mathematica2.0 1991\par
+\f1\u9642?\f0  Mathematica1.2 1989\par
+\f1\u9642?\f0  Mathematica1.0 1988\par
+8\'b2\'fa\'c6\'b7\'b9\'a6\'c4\'dc\par
+9\'d3\'a6\'d3\'c3\'b5\'c4\'c1\'b4\'bd\'d3\par
+\f1\u9642?\f0  \'d6\'a7\'b3\'d6\'d3\'ef\'d1\'d4\par
+\f1\u9642?\f0  \'d6\'a7\'b3\'d6\'c8\'ed\'bc\'fe\par
+10\'bf\'c9\'bc\'c6\'cb\'e3\'ca\'fd\'be\'dd\par
+11\'c6\'bd\'cc\'a8\'bf\'c9\'d3\'c3\'d0\'d4\par
+1\'c0\'fa\'ca\'b7\par
+\'b1\'e0\'bc\'ad\par
+\par
+\'c8\'cb\'c3\'c7\'b3\'a3\'cb\'b5\'a3\'acMathematica\'b5\'c4\'b7\'a2\'b2\'bc\'b1\'ea\'d6\'be\'d7\'c5\'cf\'d6\'b4\'fa\'bf\'c6\'bc\'bc\'bc\'c6\'cb\'e3\'b5\'c4\'bf\'aa\'ca\'bc\'a1\'a3\'d7\'d4\'b4\'d3\'c9\'cf\'ca\'c0\'bc\'cd\'c1\'f9\'ca\'ae\'c4\'ea\'b4\'fa\'d2\'d4\'c0\'b4\'a3\'ac\'d4\'da\'ca\'fd\'d6\'b5\'a1\'a2\'b4\'fa\'ca\'fd\'a1\'a2\'cd\'bc\'d0\'ce\'a1\'a2\'ba\'cd\'c6\'e4\'cb\'fc\'b7\'bd\'c3\'e6\'d2\'bb\'d6\'b1\'d3\'d0\'b8\'f6\'b1\'f0\'b5\'c4\'c8\'ed\'bc\'fe\'b0\'fc\'b4\'e6\'d4\'da\'a1\'a3\'b5\'ab\'ca\'c7\'a3\'acMathematica\'b5\'c4\'bb\'f9\'b1\'be\'b8\'c5\'c4\'ee\'ca\'c7\'d3\'c3\'d2\'bb\'b8\'f6\'c1\'ac\'b9\'e1\'b5\'c4\'ba\'cd\'cd\'b3\'d2\'bb\'b5\'c4\'b7\'bd\'b7\'a8\'b4\'b4\'d4\'ec\'d2\'bb\'b8\'f6\'c4\'dc\'ca\'ca\'d3\'c3\'d3\'da\'bf\'c6\'bc\'bc\'bc\'c6\'cb\'e3\'b8\'f7\'b8\'f6\'b7\'bd\'c3\'e6\'b5\'c4\'c8\'ed\'bc\'fe\'cf\'b5\'cd\'b3\'a1\'a3\'ca\'b5\'cf\'d6\'d5\'e2\'d2\'bb\'b5\'e3\'b5\'c4\'b9\'d8\'bc\'fc\'d6\'ae\'b4\'a6\'ca\'c7\'b7\'a2\'c3\'f7\'c1\'cb\'d2\'bb\'d6\'d6\'d0\'c2\'b5\'c4\'bc\'c6\'cb\'e3\'bb\'fa\'b7\'fb\'ba\'c5\'d3\'ef\'d1\'d4\'a1\'a3\'d5\'e2\'d6\'d6\'d3\'ef\'d1\'d4\'c4\'dc\'bd\'f6\'bd\'f6\'d3\'c3\'ba\'dc\'c9\'d9\'c1\'bf\'b5\'c4\'bb\'f9\'b1\'be\'d4\'aa\'cb\'d8\'d6\'c6\'d4\'ec\'b3\'f6\'b9\'e3\'b7\'ba\'b5\'c4\'ce\'ef\'cc\'e5\'a3\'ac\'c2\'fa\'d7\'e3\'bf\'c6\'bc\'bc\'bc\'c6\'cb\'e3\'b5\'c4\'b9\'e3\'b7\'ba\'d0\'d4\'a1\'a3\'d5\'e2\'d4\'da\'c8\'cb\'c0\'e0\'c0\'fa\'ca\'b7\'c9\'cf\'bb\'b9\'ca\'c7\'b5\'da\'d2\'bb\'b4\'ce\'a1\'a3\par
+\'b5\'b1Mathematica1.0\'b0\'e6\'b7\'a2\'b2\'bc\'ca\'b1\'a3\'ac\'a1\'b6\'c5\'a6\'d4\'bc\'ca\'b1\'b4\'fa\'b1\'a8\'a1\'b7\'d0\'b4\'b5\'c0\'a3\'ba\ldblquote\'d5\'e2\'b8\'f6\'c8\'ed\'bc\'fe\'b5\'c4\'d6\'d8\'d2\'aa\'d0\'d4\'b2\'bb\'bf\'c9\'ba\'f6\'ca\'d3\rdblquote\'a3\'bb\'bd\'f4\'b8\'fa\'d7\'c5\'a1\'b6\'c9\'cc\'d2\'b5\'d6\'dc\'bf\'af\'a1\'b7\'d3\'d6\'bd\'abMathematica\'c6\'c0\'b1\'c8\'ce\'aa\'b5\'b1\'c4\'ea\'ca\'ae\'b4\'f3\'d7\'ee\'d6\'d8\'d2\'aa\'b2\'fa\'c6\'b7\'a1\'a3\'d4\'da\'bf\'c6\'bc\'bc\'bd\'e7\'a3\'acMathematica\'b1\'bb\'d0\'ce\'c8\'dd\'ce\'aa\'d6\'c7\'c4\'dc\'ba\'cd\'ca\'b5\'bc\'f9\'b5\'c4\'b8\'ef\'c3\'fc\'a1\'a3\par
+2\'d3\'b0\'cf\'ec\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica \'d3\'a6\'d3\'c3\'b9\'e3\'b7\'ba\par
+Mathematica \'d3\'a6\'d3\'c3\'b9\'e3\'b7\'ba\par
+Mathematica\'b5\'c4\'d3\'c3\'bb\'a7\'c8\'ba\'d6\'d0\'d7\'ee\'d6\'f7\'d2\'aa\'b5\'c4\'ca\'c7\'bf\'c6\'bc\'bc\'b9\'a4\'d7\'f7\'d5\'df\'ba\'cd\'c6\'e4\'cb\'fc\'d7\'a8\'d2\'b5\'c8\'cb\'ca\'bf\'a1\'a3\'b5\'ab\'ca\'c7\'a3\'acMathematica\'bb\'b9\'b1\'bb\'b9\'e3\'b7\'ba\'b5\'d8\'d3\'c3\'d3\'da\'bd\'cc\'d1\'a7\'d6\'d0\'a1\'a3\'ca\'fd\'d1\'a7\'d6\'d0\'b5\'c4\'d0\'ed\'b6\'e0\'bc\'c6\'cb\'e3\'ca\'c7\'b7\'c7\'b3\'a3\'b7\'b1\'cb\'f6\'b5\'c4\'a3\'ac\'cc\'d8\'b1\'f0\'ca\'c7\'ba\'af\'ca\'fd\'b5\'c4\'d7\'f7\'cd\'bc\'b7\'d1\'ca\'b1\'d3\'d6\'b7\'d1\'c1\'a6\'a3\'ac\'b6\'f8\'c7\'d2\'cb\'f9\'bb\'ad\'b5\'c4\'cd\'bc\'d0\'ce\'ba\'dc\'b2\'bb\'b9\'e6\'b7\'b6\'a3\'ac\'cb\'f9\'d2\'d4\'cf\'d6\'d4\'da\'c1\'f7\'d0\'d0\'d3\'c3Mathematica\'b7\'fb\'ba\'c5\'bc\'c6\'cb\'e3\'cf\'b5\'cd\'b3\'bd\'f8\'d0\'d0\'d1\'a7\'cf\'b0\'a3\'ac\'b4\'d3\'b8\'df\'d6\'d0\'b5\'bd\'d1\'d0\'be\'bf\'c9\'fa\'d4\'ba\'b5\'c4\'ca\'fd\'d2\'d4\'b0\'d9\'bc\'c6\'b5\'c4\'bf\'ce\'b3\'cc\'b6\'bc\'ca\'b9\'d3\'c3\'cb\'fc\'a3\'ac\'ba\'dc\'b6\'e0\'ce\'ca\'cc\'e2\'b1\'e3\'d3\'ad\'c8\'d0\'b6\'f8\'bd\'e2\'a1\'a3\'b4\'cb\'cd\'e2\'a3\'ac\'cb\'e6\'d7\'c5\'d1\'a7\'c9\'fa\'b0\'e6\'b5\'c4\'b3\'f6\'cf\'d6\'a3\'acMathematica\'d2\'d1\'be\'ad\'d4\'da\'c8\'ab\'ca\'c0\'bd\'e7\'b5\'c4\'d1\'a7\'c9\'fa\'d6\'d0\'c1\'f7\'d0\'d0\'c6\'f0\'c0\'b4\'a3\'ac\'b3\'c9\'ce\'aa\'c1\'cb\'d2\'bb\'b8\'f6\'d6\'f8\'c3\'fb\'b5\'c4\'b9\'a4\'be\'df\'a1\'a3\par
+3\'bf\'aa\'b7\'a2\'b9\'a4\'d7\'f7\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'b5\'c4\'bf\'aa\'b7\'a2\'b9\'a4\'d7\'f7\'ca\'c7\'d3\'c9\'ca\'c0\'bd\'e7\'bc\'b6\'b5\'c4\'b6\'d3\'ce\'e9\'d7\'e9\'b3\'c9\'b5\'c4\'a1\'a3\'d5\'e2\'d6\'a7\'b6\'d3\'ce\'e9\'d7\'d4\'b4\'d3\'b3\'c9\'c1\'a2\'d2\'d4\'c0\'b4\'d2\'bb\'d6\'b1\'d3\'c9\'ca\'b7\'b5\'d9\'b7\'d2\'a1\'a4\'ce\'d6\'b6\'fb\'b7\'f2\'c0\'d5\'c4\'b7\'c1\'ec\'b5\'bc\'a1\'a3Mathematica\'b5\'c4\'b3\'c9\'b9\'a6\'ca\'b9\'b5\'c3\'b9\'ab\'cb\'be\'c4\'dc\'b9\'bb\'bc\'af\'d6\'d0\'d7\'a2\'d2\'e2\'c1\'a6\'d4\'da\'b7\'c7\'b3\'a3\'b3\'a4\'d4\'b6\'b5\'c4\'c4\'bf\'b1\'ea\'c9\'cf\'a3\'ac\'d4\'cb\'d0\'d0\'b6\'c0\'cc\'d8\'b5\'c4\'d1\'d0\'b7\'a2\'cf\'ee\'c4\'bf\'a3\'ac\'d2\'d4\'bc\'b0\'cd\'a8\'b9\'fd\'b8\'f7\'d6\'d6\'b8\'f7\'d1\'f9\'b5\'c4\'c3\'e2\'b7\'d1\'cd\'f8\'d5\'be\'d6\'a7\'b3\'d6\'ca\'c0\'bd\'e7\'b8\'f7\'b5\'d8\'b5\'c4\'d6\'aa\'ca\'b6\'b0\'ae\'ba\'c3\'d5\'df\'a1\'a3\par
+\'b3\'a4\'c6\'da\'d2\'d4\'c0\'b4\'a3\'acMathematica\'ba\'cb\'d0\'c4\'c9\'e8\'bc\'c6\'b5\'c4\'c6\'d5\'b1\'e9\'d0\'d4\'ca\'b9\'b5\'c3\'c6\'e4\'c9\'e6\'bc\'b0\'b5\'c4\'c1\'ec\'d3\'f2\'b2\'bb\'b6\'cf\'d4\'f6\'b3\'a4\'a1\'a3\'b4\'d3\'b8\'d5\'bf\'aa\'ca\'bc\'ca\'c7\'d2\'bb\'b8\'f6\'d6\'f7\'d2\'aa\'d3\'c3\'d3\'da\'ca\'fd\'d1\'a7\'ba\'cd\'bf\'c6\'bc\'bc\'bc\'c6\'cb\'e3\'b5\'c4\'cf\'b5\'cd\'b3\'a3\'ac\'b5\'bd\'b7\'a2\'d5\'b9\'b3\'c9\'d0\'ed\'b6\'e0\'bc\'c6\'cb\'e3\'c1\'ec\'d3\'f2\'b5\'c4\'d6\'f7\'d2\'aa\'c1\'a6\'c1\'bf\'a3\'acMathematica\'d2\'d1\'be\'ad\'b3\'c9\'ce\'aa\'ca\'c0\'bd\'e7\'c9\'cf\'d7\'ee\'c7\'bf\'b4\'f3\'b5\'c4\'cd\'a8\'d3\'c3\'bc\'c6\'cb\'e3\'cf\'b5\'cd\'b3\'a1\'a3\par
+4\'b8\'df\'d0\'d4\'c4\'dc\'bc\'c6\'cb\'e3\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'cf\'b5\'cd\'b3\'d2\'d1\'be\'ad\'d6\'a7\'b3\'d6\'b8\'df\'d0\'d4\'c4\'dc\'bc\'c6\'cb\'e3\'a1\'a3\'d4\'daMathematica 5.2\'b0\'e6\'b1\'be\'d6\'d0\'a3\'ac\'cb\'fc\'d2\'d1\'be\'ad\'d6\'a7\'b3\'d6\'d7\'d4\'b6\'af\'b6\'e0\'cf\'df\'b3\'cc\'bc\'c6\'cb\'e3\'a1\'a3\'d4\'da2002\'c4\'ea\'a3\'acgridMathematica\'b5\'c4\'d2\'fd\'c8\'eb\'ca\'b9\'b5\'c3\'d3\'c3\'bb\'a7\'bc\'b6\'b5\'c4\'b2\'a2\'d0\'d0\'b1\'e0\'b3\'cc\'bf\'c9\'d2\'d4\'d4\'da\'b2\'bb\'cd\'ac\'b5\'c4\'bc\'af\'c8\'ba\'ba\'cd\'b6\'e0\'b4\'a6\'c0\'ed\'c6\'f7\'cf\'b5\'cd\'b3\'d6\'d0\'bd\'f8\'d0\'d0\'d4\'da2008\'c4\'ea\'a3\'ac\'d4\'da\'cb\'f9\'d3\'d0\'b5\'c4Mathematica\'d0\'ed\'bf\'c9\'d6\'a4\'d6\'d0\'c4\'d2\'c0\'a8\'c1\'cb\'b2\'a2\'d0\'d0\'bc\'c6\'cb\'e3\'bc\'bc\'ca\'f5\'a3\'ac\'b0\'fc\'c0\'a8\'d6\'a7\'b3\'d6\'cd\'f8\'b8\'f1\'bc\'bc\'ca\'f5\'c8\'e7Windows HPC Server 2008\'a1\'a2Microsoft Compute Cluster Server\'ba\'cdSun Grid\'a1\'a32010\'c4\'ea\'a3\'acMathematica\'d4\'f6\'bc\'d3\'c1\'cb\'b6\'d4CUDA\'ba\'cdOpenCLGPU\'d3\'b2\'bc\'fe\'b5\'c4\'d6\'a7\'b3\'d6\'a1\'a3\'c1\'ed\'cd\'e2\'a3\'ac\'b5\'da8\'b0\'e6\'bb\'b9\'bf\'c9\'d2\'d4\'c9\'fa\'b3\'c9C\'b4\'fa\'c2\'eb\'a3\'ac\'cb\'fc\'bf\'c9\'d2\'d4\'d7\'d4\'b6\'af\'d3\'c9\'cf\'b5\'cd\'b3C\'b1\'e0\'d2\'eb\'c6\'f7\'bd\'f8\'d0\'d0\'b1\'e0\'d2\'eb\'a3\'ac\'b1\'c8\'c8\'e7Intel C++\'b1\'e0\'d2\'eb\'c6\'f7\'bb\'f2\'d5\'dfVisual Studio 2010\'b1\'e0\'d2\'eb\'c6\'f7\'a1\'a3\par
+5\'bd\'e7\'c3\'e6\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica \'b7\'d6\'ce\'aa\'c1\'bd\'b2\'bf\'b7\'d6\'a3\'ba\'c4\'da\'ba\'cb\'ba\'cd\'c7\'b0\'b6\'cb\'a1\'a3\'c4\'da\'ba\'cb\'b6\'d4\'b1\'ed\'b4\'ef\'ca\'bd\'a3\'a8\'bc\'b4 Mathematica \'b4\'fa\'c2\'eb\'a3\'a9\'bd\'f8\'d0\'d0\'bd\'e2\'ca\'cd\'a3\'ac\'b2\'a2\'c7\'d2\'b7\'b5\'bb\'d8\'bd\'e1\'b9\'fb\'b1\'ed\'b4\'ef\'ca\'bd\'a1\'a3\par
+\'c7\'b0\'b6\'cb\'d3\'c9 Theodore Gray \'c9\'e8\'bc\'c6\'a3\'ac\'cc\'e1\'b9\'a9\'c1\'cb\'d2\'bb\'b8\'f6 GUI\'a3\'ac\'cb\'fc\'ca\'b9\'b5\'c3\'d3\'c3\'bb\'a7\'bf\'c9\'d2\'d4\'b4\'b4\'bd\'a8\'b2\'a2\'c7\'d2\'b1\'e0\'bc\'ad\'d2\'bb\'b8\'f6\ldblquote\'b1\'ca\'bc\'c7\'b1\'be\'ce\'c4\'b5\'b5\rdblquote ,\'b8\'c3\'b1\'ca\'bc\'c7\'b1\'be\'ce\'c4\'b5\'b5\'bf\'c9\'d2\'d4\'b0\'fc\'ba\'ac\'b3\'cc\'d0\'f2\'b4\'fa\'c2\'eb\'ba\'cd\'c6\'e4\'cb\'fc\'b8\'f1\'ca\'bd\'bb\'af\'b5\'c4\'ce\'c4\'b1\'be\'a3\'a8\'b1\'c8\'c8\'e7\'b9\'ab\'ca\'bd\'a1\'a2\'cd\'bc\'cf\'f1\'a1\'a2GUI\'d7\'e9\'bc\'fe\'a1\'a2\'b1\'ed\'b8\'f1\'a1\'a2\'c9\'f9\'d2\'f4\'b5\'c8\'a3\'a9\'a3\'ac\'b2\'a2\'c7\'d2\'d6\'a7\'b3\'d6\'b1\'ea\'d7\'bc\'ce\'c4\'d7\'d6\'b4\'a6\'c0\'ed\'b9\'a6\'c4\'dc\'a1\'a3\'cb\'f9\'d3\'d0\'b5\'c4\'c4\'da\'c8\'dd\'ba\'cd\'b8\'f1\'ca\'bd\'b6\'bc\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd\'cb\'e3\'b7\'a8\'c9\'fa\'b3\'c9\'bb\'f2\'d5\'df\'cd\'a8\'b9\'fd\'bd\'bb\'bb\'a5\'ca\'bd\'b7\'bd\'b7\'a8\'bd\'f8\'d0\'d0\'b1\'e0\'bc\'ad\'a1\'a3\par
+\'ce\'c4\'b5\'b5\'bf\'c9\'d2\'d4\'ca\'b9\'d3\'c3\'b2\'e3\'b4\'ce\'ca\'bd\'b5\'a5\'d4\'aa\'bd\'f8\'d0\'d0\'bd\'e1\'b9\'b9\'bb\'af\'b4\'a6\'c0\'ed\'a3\'ac\'d5\'e2\'d1\'f9\'b1\'e3\'d3\'da\'b6\'d4\'ce\'c4\'b5\'b5\'bb\'ae\'b7\'d6\'d5\'c2\'bd\'da\'a1\'a3\'ce\'c4\'b5\'b5\'d2\'b2\'bf\'c9\'d2\'d4\'b1\'ed\'ca\'be\'ce\'aa\'bb\'c3\'b5\'c6\'c6\'ac\'d0\'ce\'ca\'bd\'a3\'ac\'b1\'e3\'d3\'da\'bd\'f8\'d0\'d0\'d1\'dd\'bd\'b2\'a1\'a3\'b1\'ca\'bc\'c7\'b1\'be\'d3\'eb\'c6\'e4\'c4\'da\'c8\'dd\'be\'f9\'d2\'d4 Mathematica \'b1\'ed\'b4\'ef\'ca\'bd\'b5\'c4\'d0\'ce\'ca\'bd\'b4\'e6\'b4\'a2\'a3\'ac\'b2\'a2\'c7\'d2\'bf\'c9\'d3\'c3\'ca\'b9\'d3\'c3 Mathematica \'b3\'cc\'d0\'f2\'bd\'f8\'d0\'d0\'b4\'b4\'bd\'a8\'a1\'a2\'b1\'e0\'bc\'ad\'ba\'cd\'d0\'de\'b8\'c4\'a3\'ac\'b6\'f8\'c7\'d2\'bb\'b9\'bf\'c9\'d2\'d4\'d7\'aa\'bb\'af\'ce\'aa\'c6\'e4\'cb\'fc\'b8\'f1\'ca\'bd\'a3\'ac\'b1\'c8\'c8\'e7 TeX \'bb\'f2\'d5\'df XML\'a1\'a3\par
+\'c7\'b0\'b6\'cb\'b0\'fc\'c0\'a8\'bf\'aa\'b7\'a2\'b9\'a4\'be\'df\'a3\'ac\'b1\'c8\'c8\'e7\'b5\'f7\'ca\'d4\'c6\'f7\'a1\'a2\'ca\'e4\'c8\'eb\'d7\'d4\'b6\'af\'b2\'b9\'c8\'ab\'a1\'a2\'d2\'d4\'bc\'b0\'d7\'d4\'b6\'af\'d3\'ef\'b7\'a8\'d7\'c5\'c9\'ab\'a1\'a3\par
+\'c4\'ac\'c8\'cf\'c7\'e9\'bf\'f6\'cf\'c2\'a3\'acMathematica \'ca\'b9\'d3\'c3\'d2\'bb\'b8\'f6\'b1\'ea\'d7\'bc\'c7\'b0\'b6\'cb\'a3\'ac\'b2\'bb\'b9\'fd\'d2\'b2\'d3\'d0\'c6\'e4\'cb\'fc\'c7\'b0\'b6\'cb\'bf\'c9\'b9\'a9\'d1\'a1\'d4\'f1\'a3\'ac\'b0\'fc\'c0\'a8 Wolfram Workbench\'a1\'a22006\'c4\'ea\'d2\'fd\'c8\'eb\'b5\'c4\'bb\'f9\'d3\'da Eclipse \'b5\'c4IDE\'a1\'a3\'cb\'fc\'c3\'c7\'ce\'aa Mathematica \'cc\'e1\'b9\'a9\'c1\'cb\'c3\'e6\'cf\'f2\'cf\'ee\'c4\'bf\'b5\'c4\'bf\'aa\'b7\'a2\'b9\'a4\'be\'df\'a3\'ac\'b0\'fc\'c0\'a8\'b0\'e6\'b1\'be\'b9\'dc\'c0\'ed\'a1\'a2\'b5\'f7\'ca\'d4\'a1\'a2\'b9\'e9\'b5\'b5\'ba\'cd\'b2\'e2\'ca\'d4\'a1\'a3 \'b4\'cb\'cd\'e2\'a3\'acMathematica \'bb\'b9\'b0\'fc\'c0\'a8\'d2\'bb\'b8\'f6\'c3\'fc\'c1\'ee\'d0\'d0\'c7\'b0\'b6\'cb\'a3\'a8Mathematica Kernel\'a3\'a9\'a1\'a3\par
+6\'b2\'fa\'c6\'b7\'b9\'a6\'c4\'dc\par
+\'b1\'e0\'bc\'ad\par
+\par
+\'bb\'f9\'b1\'be\'d4\'cb\'cb\'e3\par
+\par
+a+\par
+mathematica\'ca\'fd\'d1\'a7\'ca\'b5\'d1\'e9(\'b5\'da2\'b0\'e6)\par
+mathematica\'ca\'fd\'d1\'a7\'ca\'b5\'d1\'e9(\'b5\'da2\'b0\'e6)\par
+b+c \'bc\'d3\par
+a-b \'bc\'f5\par
+a b c \'bb\'f2 a*b*c \'b3\'cb\par
+a/b \'b3\'fd\par
+-a \'b8\'ba\'ba\'c5\par
+a^b \'b4\'ce\'b7\'bd\par
+Mathematica \'ca\'fd\'d7\'d6\'b5\'c4\'d0\'ce\'ca\'bd\par
+256 \'d5\'fb\'ca\'fd\par
+2.56 \'ca\'b5\'ca\'fd\par
+11/35 \'b7\'d6\'ca\'fd\par
+2+6I \'b8\'b4\'ca\'fd\par
+\'b3\'a3\'d3\'c3\'b5\'c4\'ca\'fd\'d1\'a7\'b3\'a3\'ca\'fd\par
+Pi \'d4\'b2\'d6\'dc\'c2\'ca\'a3\'ac\f2\lang1032\'f0\f0\lang1033 =3.141592654\'a1\'ad\par
+E \'c5\'b7\'c0\'ad\'b3\'a3\'ca\'fd\'a3\'ace=2.71828182\'a1\'ad\par
+Degree \'bd\'c7\'b6\'c8\'d7\'aa\'bb\'bb\'bb\'a1\'b6\'c8\'b5\'c4\'b3\'a3\'ca\'fd\'a3\'acPi/180\par
+I \'d0\'e9\'ca\'fd\'b5\'a5\'ce\'bb\'a3\'ac\'c6\'e4\'d6\'b5\'ce\'aa \f3\u8730?\f0 -1\par
+Infinity \'ce\'de\'cf\'de\'b4\'f3\par
+\'d6\'b8\'b6\'a8\'d6\'ae\'c7\'b0\'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb\'b5\'c4\'b7\'bd\'b7\'a8\par
+% \'c7\'b0\'d2\'bb\'b8\'f6\'d4\'cb\'cb\'e3\'bd\'e1\'b9\'fb\par
+%% \'c7\'b0\'b6\'fe\'b8\'f6\'d4\'cb\'cb\'e3\'bd\'e1\'b9\'fb\par
+%%\'a1\'ad%(n\'b8\'f6%) \'c7\'b0n\'b8\'f6\'d4\'cb\'cb\'e3\'bd\'e1\'b9\'fb\par
+%n \'bb\'f2 Out[n] \'c7\'b0n\'b8\'f6\'d4\'cb\'cb\'e3\'bd\'e1\'b9\'fb\par
+\'b8\'b4\'ca\'fd\'b5\'c4\'d4\'cb\'cb\'e3\'d6\'b8\'c1\'ee\par
+a+bI \'b8\'b4\'ca\'fd\par
+Conjugate[a+bI] \'b9\'b2\'e9\'ee\'b8\'b4\'ca\'fd\par
+Re[z], Im[z] \'b8\'b4\'ca\'fdz\'b5\'c4\'ca\'b5\'ca\'fd/\'d0\'e9\'ca\'fd\'b2\'bf\'b7\'d6\par
+Abs[z] \'b8\'b4\'ca\'fdz\'b5\'c4\'b4\'f3\'d0\'a1\'bb\'f2\'c4\'a3\'ca\'fd(Modulus)\par
+Arg[z] \'b8\'b4\'ca\'fdz\'b5\'c4\'b7\'f9\'bd\'c7(Argument)\par
+Mathematica \'ca\'e4\'b3\'f6\'b5\'c4\'bf\'d8\'d6\'c6\'d6\'b8\'c1\'ee\par
+expr1; expr2; expr3 \'d7\'f6\'ca\'fd\'b8\'f6\'d4\'cb\'cb\'e3\'a3\'ac\'b5\'ab\'d6\'bb\'d3\'a1\'b3\'f6\'d7\'ee\'ba\'f3\'d2\'bb\'b8\'f6\'d4\'cb\'cb\'e3\'b5\'c4\'bd\'e1\'b9\'fb\par
+expr1; expr2; expr3; \'d7\'f6\'ca\'fd\'b8\'f6\'d4\'cb\'cb\'e3\'a3\'ac\'b5\'ab\'b6\'bc\'b2\'bb\'d3\'a1\'b3\'f6\'bd\'e1\'b9\'fb\par
+expr; \'d7\'f6\'d4\'cb\'cb\'e3\'a3\'ac\'b5\'ab\'b2\'bb\'d3\'a1\'b3\'f6\'bd\'e1\'b9\'fb\par
+\'b3\'a3\'d3\'c3\'ca\'fd\'d1\'a7\'ba\'af\'ca\'fd\par
+\par
+Sin[x],Cos[x],Tan[x],Cot[x],Sec[x],Csc[x] \'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'a3\'ac\'c6\'e4\'d2\'fd\'ca\'fd\'b5\'c4\'b5\'a5\'ce\'bb\'ce\'aa\'bb\'a1\'b6\'c8\par
+Sinh[x],Cosh[x],Tanh[x],\'a1\'ad \'cb\'ab\'c7\'fa\'ba\'af\'ca\'fd\par
+ArcSin[x],ArcCos[x],ArcTan[x] \'b7\'b4\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\par
+ArcCot[x],ArcSec[x],ArcCsc[x]\par
+ArcSinh[x],ArcCosh[x],ArcTanh[x],\'a1\'ad \'b7\'b4\'cb\'ab\'c7\'fa\'ba\'af\'ca\'fd\par
+Sqrt[x] \'b8\'f9\'ba\'c5\par
+Exp[x] \'d6\'b8\'ca\'fd\par
+Log[x] \'d7\'d4\'c8\'bb\'b6\'d4\'ca\'fd\par
+Log[a,x] \'d2\'d4a\'ce\'aa\'b5\'d7\'b5\'c4\'b6\'d4\'ca\'fd\par
+Abs[x] \'be\'f8\'b6\'d4\'d6\'b5\par
+Round[x] \'d7\'ee\'bd\'d3\'bd\'fcx\'b5\'c4\'d5\'fb\'ca\'fd\par
+Floor[x] \'d0\'a1\'d3\'da\'bb\'f2\'b5\'c8\'d3\'dax\'b5\'c4\'d7\'ee\'b4\'f3\'d5\'fb\'ca\'fd\par
+Ceiling[x] \'b4\'f3\'d3\'da\'bb\'f2\'b5\'c8\'d3\'dax\'b5\'c4\'d7\'ee\'d0\'a1\'d5\'fb\'ca\'fd\par
+Mod[a,b] a/b\'cb\'f9\'b5\'c3\'b5\'c4\'d3\'e0\'ca\'fd\par
+n! \'bd\'d7\'b3\'cb\par
+Random[] 0\'d6\'c11\'d6\'ae\'bc\'e4\'b5\'c4\'cb\'e6\'bb\'fa\'ca\'fd\'a3\'a8\'d7\'ee\'d0\'c2\'b0\'e6\'b1\'be\'d2\'d1\'be\'ad\'b2\'bb\'d3\'c3\'d5\'e2\'b8\'f6\'ba\'af\'ca\'fd\'a3\'ac\'b8\'c4\'ce\'aa\'ca\'b9\'d3\'c3RandomReal[]\'a3\'a9\par
+Max[a,b,c,...]\'a3\'acMin[a,b,c,\'a1\'ad] a,b,c,\'a1\'ad\'b5\'c4\'bc\'ab\'b4\'f3/\'bc\'ab\'d0\'a1\'d6\'b5\par
+\'ca\'fd\'d6\'b5\'c9\'e8\'b6\'a8\par
+\par
+x=a \'bd\'ab\'b1\'e4\'ca\'fdx\'b5\'c4\'d6\'b5\'c9\'e8\'ce\'aaa\par
+x=y=b \'bd\'ab\'b1\'e4\'ca\'fdx\'ba\'cdy\'b5\'c4\'d6\'b5\'be\'f9\'c9\'e8\'ce\'aab\par
+x=. \'bb\'f2 Clear[x] \'b3\'fd\'c8\'a5\'b1\'e4\'ca\'fdx\'cb\'f9\'b4\'e6\'b5\'c4\'d6\'b5\par
+\'b1\'e4\'ca\'fd\'ca\'b9\'d3\'c3\'b5\'c4\'d2\'bb\'d0\'a9\'b7\'a8\'d4\'f2\par
+xy \'d6\'d0\'bc\'e4\'c3\'bb\'d3\'d0\'bf\'d5\'b8\'f1\'a3\'ac\'ca\'d3\'ce\'aa\'b1\'e4\'ca\'fdxy\par
+x y x\'b3\'cb\'c9\'cfy\par
+3x 3\'b3\'cb\'c9\'cfx\par
+x3 \'b1\'e4\'ca\'fdx3\par
+x^2y \'ce\'aa x^2 y\'b4\'ce\'b7\'bd\'d4\'cb\'cb\'e3\'d7\'d3\'b1\'c8\'b3\'cb\'b7\'a8\'b5\'c4\'d4\'cb\'cb\'e3\'d7\'d3\'d3\'d0\'bd\'cf\'b8\'df\'b5\'c4\'b4\'a6\'c0\'ed\'cb\'b3\'d0\'f2\par
+\'cb\'c4\'b8\'f6\'b4\'a6\'c0\'ed\'d6\'b8\'c1\'ee\par
+\par
+Expand[expr] \'bd\'ab expr\'d5\'b9\'bf\'aa\par
+Factor[expr] \'bd\'ab expr\'d2\'f2\'ca\'bd\'b7\'d6\'bd\'e2\par
+Simplify[expr] \'bd\'ab expr\'bb\'af\'bc\'f2\'b3\'c9\'be\'ab\'bc\'f2\'b5\'c4\'ca\'bd\'d7\'d3\par
+FullSimplify[expr] Mathematica \'bb\'e1\'b3\'a2\'ca\'d4\'b8\'fc\'b6\'e0\'b5\'c4\'bb\'af\'bc\'f2\'b9\'ab\'ca\'bd\'a3\'ac\'bd\'ab expr\'bb\'af\'b3\'c9\'b8\'fc\'be\'ab\'bc\'f2\'b5\'c4\'ca\'bd\'d7\'d3\par
+\'b6\'e0\'cf\'ee\'ca\'bd\'d7\'aa\'bb\'bb\par
+\par
+ExpandAll[expr] \'b0\'d1\'cb\'e3\'ca\'bd\'c8\'ab\'b2\'bf\'d5\'b9\'bf\'aa\par
+Together[expr] \'bd\'ab expr\'b8\'f7\'cf\'ee\'cd\'a8\'b7\'d6\'d4\'da\'b2\'a2\'b3\'c9\'d2\'bb\'cf\'ee\par
+Apart[expr] \'b0\'d1\'b7\'d6\'ca\'bd\'b2\'f0\'bf\'aa\'b3\'c9\'ca\'fd\'cf\'ee\'b7\'d6\'ca\'bd\'b5\'c4\'ba\'cd\par
+Apart[expr,var] \'ca\'d3var\'d2\'d4\'cd\'e2\'b5\'c4\'b1\'e4\'ca\'fd\'ce\'aa\'b3\'a3\'ca\'fd\'a3\'ac\'bd\'ab expr\'b2\'f0\'b3\'c9\'ca\'fd\'cf\'ee\'b5\'c4\'ba\'cd\par
+Cancel[expr] \'b0\'d1\'b7\'d6\'d7\'d3\'ba\'cd\'b7\'d6\'c4\'b8\'b9\'b2\'cd\'ac\'b5\'c4\'d2\'f2\'d7\'d3\'cf\'fb\'c8\'a5\par
+\'b7\'d6\'c4\'b8\'b7\'d6\'d7\'d3\'d4\'cb\'cb\'e3\par
+\par
+Denominator[expr] \'c8\'a1\'b3\'f6expr\'b5\'c4\'b7\'d6\'c4\'b8\par
+Numerator[expr] \'c8\'a1\'b3\'f6expr\'b5\'c4\'b7\'d6\'d7\'d3\par
+ExpandDenominator[expr] \'d5\'b9\'bf\'aaexpr\'b5\'c4\'b7\'d6\'c4\'b8\par
+ExpandNumerator[expr] \'d5\'b9\'bf\'aaexpr\'b5\'c4\'b7\'d6\'d7\'d3\par
+\'d7\'aa\'bb\'bb\'ba\'af\'ca\'fd\par
+\par
+Collect[expr,x] \'bd\'ab expr\'b1\'ed\'ca\'be\'b3\'c9x\'b5\'c4\'b6\'e0\'cf\'ee\'ca\'bd\'a3\'ac\par
+\'c8\'e7\par
+Collect[expr,\{x,y,\'a1\'ad\}] \'bd\'ab expr\'b7\'d6\'b1\'f0\'b1\'ed\'ca\'be\'b3\'c9 x,y,\'a1\'ad\'b5\'c4\'b6\'e0\'cf\'ee\'ca\'bd\par
+FactorTerms[expr] \'bd\'ab expr\'b5\'c4\'ca\'fd\'d6\'b5\'d2\'f2\'d7\'d3\'cc\'e1\'b3\'f6\'a3\'ac\par
+\'c8\'e7 4x+2=2(2x+1)\par
+FactorTerms[expr,x] \'bd\'ab expr\'d6\'d0\'b0\'d1\'cb\'f9\'d3\'d0\'b2\'bb\'b0\'fc\'ba\'acx\'cf\'ee\'b5\'c4\'d2\'f2\'d7\'d3\'cc\'e1\'b3\'f6\par
+FactorTerms[expr,\{x,y,\'a1\'ad\}] \'bd\'ab expr\'d6\'d0\'b0\'d1\'cb\'f9\'d3\'d0\'b2\'bb\'b0\'fc\'ba\'ac\{x,y,...\}\'cf\'ee\'b5\'c4\'d2\'f2\'d7\'d3\'cc\'e1\'b3\'f6\par
+\'ba\'af\'ca\'fd\'d6\'b8\'ca\'fd\'d4\'cb\'cb\'e3\par
+\par
+TrigExpand[expr] \'bd\'ab\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'d5\'b9\'bf\'aa\par
+TrigFactor[expr] \'bd\'ab\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'cb\'f9\'d7\'e9\'b3\'c9\'b5\'c4\'ca\'fd\'d1\'a7\'ca\'bd\'d2\'f2\'ca\'bd\'b7\'d6\'bd\'e2\par
+TrigReduce[expr] \'bd\'ab\'cf\'e0\'b3\'cb\'bb\'f2\'b4\'ce\'b7\'bd\'b5\'c4\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'bb\'af\'b3\'c9\'d2\'bb\'b4\'ce\'b7\'bd\'b5\'c4\'bb\'f9\'b1\'be\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'d6\'ae\'d7\'e9\'ba\'cf\par
+ExpToTrig[expr] \'bd\'ab\'d6\'b8\'ca\'fd\'ba\'af\'ca\'fd\'bb\'af\'b3\'c9\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'bb\'f2\'cb\'ab\'c7\'fa\'ba\'af\'ca\'fd\par
+TrigToExp[expr] \'bd\'ab\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'bb\'f2\'cb\'ab\'c7\'fa\'ba\'af\'ca\'fd\'bb\'af\'b3\'c9\'d6\'b8\'ca\'fd\'ba\'af\'ca\'fd\par
+\'b4\'ce\'b7\'bd\'b3\'cb\'bb\'fd\par
+\par
+ComplexExpand[expr] \'bc\'d9\'c9\'e8\'cb\'f9\'d3\'d0\'b5\'c4\'b1\'e4\'ca\'fd\'b6\'bc\'ca\'c7\'ca\'b5\'ca\'fd\'c0\'b4\'b6\'d4 expr\'d5\'b9\'bf\'aa\par
+ComplexExpand[expr,\{x,y,\'a1\'ad\}] \'bc\'d9\'c9\'e8x,y,..\'b5\'c8\'b1\'e4\'ca\'fd\'be\'f9\'ce\'aa\'b8\'b4\'ca\'fd\'c0\'b4\'b6\'d4 expr\'d5\'b9\'bf\'aa\par
+PowerExpand[expr] \'bd\'ab\par
+\'cf\'b5\'ca\'fd\'d7\'ee\'b8\'df\'b4\'ce\'b7\'bd\par
+\par
+Coefficient[expr,form] \'d3\'da expr\'d6\'d0form\'b5\'c4\'cf\'b5\'ca\'fd\par
+Exponent[expr,form] \'d3\'da expr\'d6\'d0form\'b5\'c4\'d7\'ee\'b8\'df\'b4\'ce\'b7\'bd\par
+Part[expr,n] \'bb\'f2 expr[[n]] \'d4\'da expr\'cf\'ee\'d6\'d0\'b5\'dan\'b8\'f6\'cf\'ee\par
+\'b4\'fa\'bb\'bb\'d4\'cb\'cb\'e3\'d7\'d3\par
+\par
+expr/.x->value \'bd\'ab expr\'c0\'ef\'cb\'f9\'d3\'d0\'b5\'c4x\'be\'f9\'b4\'fa\'bb\'bb\'b3\'c9value\par
+expr/.\{x->value1,y->value2,\'a1\'ad\} \'d6\'b4\'d0\'d0\'ca\'fd\'b8\'f6\'b2\'bb\'cd\'ac\'b1\'e4\'ca\'fd\'b5\'c4\'b4\'fa\'bb\'bb\par
+expr/.\{\{x->value1\},\{x->value2\},\'a1\'ad\} \'bd\'ab expr\'b4\'fa\'c8\'eb\'b2\'bb\'cd\'ac\'b5\'c4x\'d6\'b5\par
+expr//.\{x->value1,y->value2,\'a1\'ad\} \'d6\'d8\'b8\'b4\'b4\'fa\'bb\'bb\'b5\'bd expr\'b2\'bb\'d4\'d9\'b8\'c4\'b1\'e4\'ce\'aa\'d6\'b9\par
+\'c7\'f3\'bd\'e2\'b7\'bd\'b3\'cc\'ca\'bd\par
+\par
+Solve[lhs==rhs,x] \'bd\'e2\'b7\'bd\'b3\'cc\'ca\'bdlhs==rhs\'a3\'ac\'c7\'f3x\par
+Nsolve[lhs==rhs,x] \'bd\'e2\'b7\'bd\'b3\'cc\'ca\'bdlhs==rhs\'b5\'c4\'ca\'fd\'d6\'b5\'bd\'e2\par
+Solve[\{lhs1==rhs1,lhs2==rhs2,\'a1\'ad\},\{x,y,\'a1\'ad\}] \'bd\'e2\'c1\'aa\'c1\'a2\'b7\'bd\'b3\'cc\'ca\'bd\'a3\'ac\'c7\'f3x,y,\'a1\'ad\par
+NSolve[\{lhs1==rhs1,lhs2==rhs2,\'a1\'ad\},\{x,y,\'a1\'ad\}] \'bd\'e2\'c1\'aa\'c1\'a2\'b7\'bd\'b3\'cc\'ca\'bd\'b5\'c4\'ca\'fd\'d6\'b5\'bd\'e2\par
+FindRoot[lhs==rhs,\{x,x0\}] \'d3\'c9\'b3\'f5\'ca\'bc\'b5\'e3x0\'c7\'f3lhs==rhs\'b5\'c4\'b8\'f9\par
+\'cb\'c4\'d6\'d6\'c0\'a8\'ba\'c5\par
+\par
+(term) \'d4\'b2\'c0\'a8\'ba\'c5\'a3\'ac\'c0\'a8\'ba\'c5\'c4\'da\'b5\'c4term\'cf\'c8\'bc\'c6\'cb\'e3\par
+f[x] \'b7\'bd\'c0\'a8\'ba\'c5\'a3\'ac\'c4\'da\'b7\'c5\'ba\'af\'ca\'fd\'b5\'c4\'d2\'fd\'ca\'fd\par
+\{x,y,z\} \'b4\'f3\'c0\'a8\'ba\'c5\'bb\'f2\'b4\'ae\'c1\'d0\'c0\'a8\'ba\'c5\'a3\'ac\'c4\'da\'b7\'c5\'b4\'ae\'c1\'d0\'b5\'c4\'d4\'aa\'cb\'d8\par
+p[[i ]] \'bb\'f2 Part[p,i] \'cb\'ab\'b7\'bd\'c0\'a8\'ba\'c5\'a3\'acp\'b5\'c4\'b5\'dai\'cf\'ee\'d4\'aa\'cb\'d8\par
+p[[i,j]] \'bb\'f2 Part[p,i,j] p\'b5\'c4\'b5\'dai\'cf\'ee\'b5\'daj\'b8\'f6\'d4\'aa\'cb\'d8\par
+\'cb\'f5\'b6\'cc\'ca\'e4\'b3\'f6\'d6\'b8\'c1\'ee\par
+\par
+expr//Short \'cf\'d4\'ca\'be\'d2\'bb\'d0\'d0\'b5\'c4\'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb\par
+Short[expr,n] \'cf\'d4\'ca\'ben\'d0\'d0\'b5\'c4\'bc\'c6\'cb\'e3\'bd\'e1\'b9\'fb\par
+Command; \'d6\'b4\'d0\'d0command\'a3\'ac\'b5\'ab\'b2\'bb\'c1\'d0\'b3\'f6\'bd\'e1\'b9\'fb\par
+\'b2\'e9\'d1\'af\'ce\'ef\'bc\'fe\par
+\par
+?Command \'b2\'e9\'d1\'afCommand\'b5\'c4\'d3\'ef\'b7\'a8\'bc\'b0\'cb\'b5\'c3\'f7\par
+??Command \'b2\'e9\'d1\'afCommand\'b5\'c4\'d3\'ef\'b7\'a8\'ba\'cd\'ca\'f4\'d0\'d4\'bc\'b0\'d1\'a1\'d4\'f1\'cf\'ee\par
+?Aaaa* \'b2\'e9\'d1\'af\'cb\'f9\'d3\'d0\'bf\'aa\'cd\'b7\'ce\'aaAaaa\'b5\'c4\'ce\'ef\'bc\'fe\par
+\'b6\'a8\'d2\'e5\'b2\'e9\'d1\'af\'c7\'e5\'b3\'fd\par
+\par
+f[x_]= expr \'c1\'a2\'bc\'b4\'b6\'a8\'d2\'e5\'ba\'af\'ca\'fdf[x]\par
+f[x_]:= expr \'d1\'d3\'b3\'d9\'b6\'a8\'d2\'e5\'ba\'af\'ca\'fdf[x]\par
+f[x_,y_,\'a1\'ad] \'ba\'af\'ca\'fdf\'d3\'d0\'c1\'bd\'b8\'f6\'d2\'d4\'c9\'cf\'b5\'c4\'d2\'fd\'ca\'fd\par
+?f \'b2\'e9\'d1\'af\'ba\'af\'ca\'fdf\'b5\'c4\'b6\'a8\'d2\'e5\par
+Clear[f] \'bb\'f2 f=. \'c7\'e5\'b3\'fdf\'b5\'c4\'b6\'a8\'d2\'e5\par
+Remove[f] \'bd\'abf\'d7\'d4\'cf\'b5\'cd\'b3\'d6\'d0\'c7\'e5\'b3\'fd\'b5\'f4\par
+\'ba\'ac\'d3\'d0\'d4\'a4\'c9\'e8\'d6\'b5\'b5\'c4Pattern\par
+a_+b_. b\'b5\'c4\'d4\'a4\'c9\'e8\'d6\'b5\'ce\'aa0\'a3\'ac\'bc\'b4\'c8\'f4b\'b4\'d3\'c8\'b1\'a3\'ac\'d4\'f2b\'d2\'d40\'b4\'fa\'cc\'e6\par
+x_ y_ y\'b5\'c4\'d4\'a4\'c9\'e8\'d6\'b5\'ce\'aa1\par
+x_^y_ y\'b5\'c4\'d4\'a4\'c9\'e8\'d6\'b5\'ce\'aa1\par
+\'cc\'f5\'bc\'fe\'ca\'bd\'b5\'c4\'d7\'d4\'b6\'a9\'ba\'af\'ca\'fd\par
+lhs:=rhs/;condition \'b5\'b1condition\'b3\'c9\'c1\'a2\'ca\'b1\'a3\'aclhs\'b2\'c5\'bb\'e1\'b6\'a8\'d2\'e5\'b3\'c9rhs\par
+If\'d6\'b8\'c1\'ee\par
+\par
+If[test,then,else] \'c8\'f4test\'ce\'aa\'d5\'e6\'a3\'ac\'d4\'f2\'bb\'d8\'d3\'a6then\'a3\'ac\'b7\'f1\'d4\'f2\'bb\'d8\'d3\'a6else\par
+If[test,then,else,unknow] \'cd\'ac\'c9\'cf\'a3\'ac\'c8\'f4test\'ce\'de\'b7\'a8\'c5\'d0\'b6\'a8\'d5\'e6\'bb\'f2\'bc\'d9\'ca\'b1\'a3\'ac\'d4\'f2\'bb\'d8\'d3\'a6unknow\par
+\'bc\'ab\'cf\'de\par
+\par
+Limit[expr,x->c] \'b5\'b1x\'c7\'f7\'bd\'fcc\'ca\'b1\'a3\'ac\'c7\'f3expr\'b5\'c4\'bc\'ab\'cf\'de\par
+Limit[expr,x->c,Direction->1]\par
+Limit[expr,x->c,Direction->-1]\par
+\'ce\'a2\'b7\'d6\par
+\par
+D[f,x] \'ba\'af\'ca\'fdf\'b6\'d4x\'d7\'f7\'ce\'a2\'b7\'d6\par
+D[f,x1,x2,\'a1\'ad] \'ba\'af\'ca\'fdf\'b6\'d4x1,x2,\'a1\'ad\'d7\'f7\'ce\'a2\'b7\'d6\par
+D[f,\{x,n\}] \'ba\'af\'ca\'fdf\'b6\'d4x\'ce\'a2\'b7\'d6n\'b4\'ce\par
+D[f,x,NonConstants->\{y,z,\'a1\'ad\}] \'ba\'af\'ca\'fdf\'b6\'d4x\'d7\'f7\'ce\'a2\'b7\'d6\'a3\'ac\'bd\'aby,z,\'a1\'ad\'ca\'d3\'ce\'aax\'b5\'c4\'ba\'af\'ca\'fd\par
+\'c8\'ab\'ce\'a2\'b7\'d6\par
+\par
+Dt[f] \'c8\'ab\'ce\'a2\'b7\'d6df\par
+Dt[f,x] \'c8\'ab\'ce\'a2\'b7\'d6\par
+Dt[f,x1,x2,\'a1\'ad] \'c8\'ab\'ce\'a2\'b7\'d6\par
+Dt[f,x,Constants->\{c1,c2,\'a1\'ad\}] \'c8\'ab\'ce\'a2\'b7\'d6\'a3\'ac\'ca\'d3c1,c2,\'a1\'ad\'ce\'aa\'b3\'a3\'ca\'fd\par
+\'b2\'bb\'b6\'a8\'bb\'fd\'b7\'d6\par
+\par
+Integrate[f,x] \'b2\'bb\'b6\'a8\'bb\'fd\'b7\'d6 \f3\u8747?\f0 f dx\par
+\'b6\'a8\'bb\'fd\'b7\'d6\par
+\par
+Integrate[f,\{x,xmin,xmax\}] \'b6\'a8\'bb\'fd\'b7\'d6\par
+Integrate[f,\{x,xmin,xmax\},\{y,ymin,ymax\}] \'b6\'a8\'bb\'fd\'b7\'d6\par
+\'c1\'d0\'d6\'ae\'ba\'cd\'d3\'eb\'bb\'fd\par
+\par
+Sum[f,\{i,imin,imax\}] \'c7\'f3\'ba\'cd\par
+Sum[f,\{i,imin,imax,di\}] \'c7\'f3\'ca\'fd\'c1\'d0\'ba\'cd\'a3\'ac\'d2\'fd\'ca\'fdi\'d2\'d4di\'b5\'dd\'d4\'f6\par
+Sum[f,\{i,imin,imax\},\{j,jmin,jmax\}]\par
+Product[f,\{i,imin,imax\}] \'c7\'f3\'bb\'fd\par
+Product[f,\{i,imin,imax,di\}] \'c7\'f3\'ca\'fd\'c1\'d0\'d6\'ae\'bb\'fd\'a3\'ac\'d2\'fd\'ca\'fdi\'d2\'d4di\'b5\'dd\'d4\'f6\par
+Product[f,\{i,imin,imax\},\{j,jmin,jmax\}]\par
+\'cc\'a9\'c0\'d5\'d5\'b9\'bf\'aa\'ca\'bd\par
+\par
+Series[expr,\{x,x0,n\}] \'b6\'d4 expr\'d3\'dax0\'b5\'e3\'d7\'f7\'cc\'a9\'c0\'d5\'bc\'b6\'ca\'fd\'d5\'b9\'bf\'aa\'d6\'c1(x-x0)n\'cf\'ee\par
+Series[expr,\{x,x0,m\},\{y,y0,n\}] \'b6\'d4x0\'ba\'cdy0\'d5\'b9\'bf\'aa\par
+\'b9\'d8\'cf\'b5\'d4\'cb\'cb\'e3\'d7\'d3\par
+a==b \'b5\'c8\'d3\'da\par
+a>b \'b4\'f3\'d3\'da\par
+a>=b \'b4\'f3\'d3\'da\'b5\'c8\'d3\'da\par
+a<b \'d0\'a1\'d3\'da\par
+a<=b \'d0\'a1\'d3\'da\'b5\'c8\'d3\'da\par
+a!=b \'b2\'bb\'b5\'c8\'d3\'da\par
+\'c2\'df\'bc\'ad\'d4\'cb\'cb\'e3\'d7\'d3\par
+\par
+!p not\par
+p||q||\'a1\'ad or\par
+p&&q&&\'a1\'ad and\par
+Xor[p,q,\'a1\'ad] exclusive or\par
+LogicalExpand[expr] \'bd\'ab\'c2\'df\'bc\'ad\'b1\'ed\'ca\'be\'ca\'bd\'d5\'b9\'bf\'aa\par
+\'b6\'fe\'ce\'ac\'bb\'e6\'cd\'bc\'d6\'b8\'c1\'ee\par
+\par
+Plot[f,\{x,xmin,xmax\}]\par
+\'bb\'ad\'b3\'f6f\'d4\'daxmin\'b5\'bdxmax\'d6\'ae\'bc\'e4\'b5\'c4\'cd\'bc\'d0\'ce\par
+Plot[\{f1,f2,\'a1\'ad\},\{x,xmin,xmax\}]\par
+\'cd\'ac\'ca\'b1\'bb\'ad\'b3\'f6\'ca\'fd\'b8\'f6\'ba\'af\'ca\'fd\'cd\'bc\'d0\'ce\par
+Plot[f,\{x,xmin,xmax\},option->value]\par
+\'d6\'b8\'b6\'a8\'cc\'d8\'ca\'e2\'b5\'c4\'bb\'e6\'cd\'bc\'d1\'a1\'cf\'ee\'a3\'ac\'bb\'ad\'b3\'f6\'ba\'af\'ca\'fdf\'b5\'c4\'cd\'bc\'d0\'ce\par
+Plot\'bc\'b8\'d6\'d6\'d6\'b8\'c1\'ee\par
+\par
+\'d1\'a1\'cf\'ee \'d4\'a4\'c9\'e8\'d6\'b5 \'cb\'b5\'c3\'f7\par
+AspectRatio 1/GoldenRatio \'cd\'bc\'d0\'ce\'b8\'df\'ba\'cd\'bf\'ed\'d6\'ae\'b1\'c8\'c0\'fd\'a3\'ac\'b8\'df/\'bf\'ed\par
+Axes True \'ca\'c7\'b7\'f1\'b0\'d1\'d7\'f8\'b1\'ea\'d6\'e1\'bb\'ad\'b3\'f6\par
+AxesLabel Automatic \'ce\'aa\'d7\'f8\'b1\'ea\'d6\'e1\'cc\'f9\'c9\'cf\'b1\'ea\'bc\'c7\'a3\'ac\'c8\'f4\'c9\'e8\'b6\'a8\'ce\'aa\par
+AxesLabel->\{?ylabel?\}\'a3\'ac\'d4\'f2\'ce\'aay\'d6\'e1\'d6\'ae\'b1\'ea\'bc\'c7\'a1\'a3\'c8\'f4\'c9\'e8\'b6\'a8\'ce\'aaAxesLabel->\{?xlabel?,?ylabel?\}\par
+\'a3\'ac\'d4\'f2\'ce\'aa\{x\'d6\'e1,y\'d6\'e1\}\'b5\'c4\'b1\'ea\'bc\'c7\par
+AxesOrigin Automatic \'d7\'f8\'b1\'ea\'d6\'e1\'b5\'c4\'cf\'e0\'bd\'bb\'b5\'c4\'b5\'e3\par
+DefaultFont $DefaultFont \'cd\'bc\'d0\'ce\'c0\'ef\'ce\'c4\'d7\'d6\'b5\'c4\'d4\'a4\'c9\'e8\'d7\'d6\'d0\'cd\par
+Frame False \'ca\'c7\'b7\'f1\'bd\'ab\'cd\'bc\'d0\'ce\'bc\'d3\'c9\'cf\'cd\'e2\'bf\'f2\par
+FrameLabel False \'b4\'d3x\'d6\'e1\'cf\'c2\'b7\'bd\'d2\'c0\'cb\'b3\'ca\'b1\'d5\'eb\'b7\'bd\'cf\'f2\'bc\'d3\'c9\'cf\'cd\'bc\'d0\'ce\'cd\'e2\'bf\'f2\'b5\'c4\'b1\'ea\'bc\'c7\par
+FrameTicks Automatic (\'c8\'e7\'b9\'fbFrame\'c9\'e8\'ce\'aaTrue)\'ce\'aa\'cd\'e2\'bf\'f2\'bc\'d3\'c9\'cf\'bf\'cc\'b6\'c8;\par
+None\'d4\'f2\'b2\'bb\'bc\'d3\'bf\'cc\'b6\'c8\par
+GridLines None \'c9\'e8Automatic\'d4\'f2\'d3\'da\'d6\'f7\'d2\'aa\'bf\'cc\'b6\'c8\'c9\'cf\'bc\'d3\'c9\'cf\'cd\'f8\'b8\'f1\'cf\'df\par
+PlotLabel None \'d5\'fb\'d5\'c5\'cd\'bc\'d6\'ae\'cd\'bc\'c3\'fb\par
+PlotRange Automatic \'d6\'b8\'b6\'a8y\'b7\'bd\'cf\'f2\'bb\'ad\'cd\'bc\'b5\'c4\'b7\'b6\'ce\'a7\par
+Ticks Automatic \'d7\'f8\'b1\'ea\'d6\'e1\'d6\'ae\'bf\'cc\'b6\'c8\'a3\'ac\'c9\'e8None\'d4\'f2\'c3\'bb\'d3\'d0\'bf\'cc\'b6\'c8\'bc\'c7\'ba\'c5\'b3\'f6\'cf\'d6\par
+\'a1\'f9\ldblquote Automatic\'a1\'a2None\'a1\'a2True\'a1\'a2False\rdblquote\'ce\'aaMathmatica\'b3\'a3\'d3\'c3\'b5\'c4\'d1\'a1\'cf\'ee\'c9\'e8\'b6\'a8\'a3\'ac\'c6\'e4\'b4\'fa\'b1\'ed\'d2\'e2\'d2\'e5\'b7\'d6\'b1\'f0\'ce\'aa\ldblquote\'ca\'b9\'d3\'c3\'c4\'da\'b2\'bf\'c9\'e8\'b6\'a8\'a1\'a2\'b2\'bb\'b0\'fc\'ba\'ac\'b4\'cb\'cf\'ee\'a1\'a2\'d7\'f7\'b4\'cb\'cf\'ee\'c4\'bf\'a1\'a2\'b2\'bb\'d7\'f7\'b4\'cb\'cf\'ee\'c4\'bf\rdblquote\'a1\'a3\par
+\'b4\'ae\'c1\'d0\'bb\'e6\'cd\'bc\par
+\par
+ListPlot[\{y1,y2,\'a1\'ad\}] \'bb\'ad\'b3\'f6\{1,y1\},\{2,y2\},\'a1\'ad\'b5\'c4\'b5\'e3\par
+ListPlot[\{\{x1,y1\},\{x2,y2\},\'a1\'ad\}] \'bb\'ad\'b3\'f6\{x1,y1\},\{x2,y2\},\'a1\'ad\'b5\'c4\'b5\'e3\par
+ListPlot[\{\{x1,y1\},\{x2,y2\},\'a1\'ad\},PlotJoined->True] \'b0\'d1\'bb\'ad\'b3\'f6\'c0\'b4\'b5\'c4\'b5\'e3\'d3\'c3\'cf\'df\'b6\'ce\'c1\'ac\'bd\'d3\par
+\'bb\'e6\'cd\'bc\'d1\'d5\'c9\'ab\'d6\'b8\'b6\'a8\par
+\par
+Plot[\{f1,f2,\'a1\'ad\},\{x,xmin,xmax\},\par
+PlotStyle->\{RGBColor[r1,g1,b1],RGBColor[r2,g2,b2],\'a1\'ad\}]\par
+\'b2\'ca\'c9\'ab\'bb\'e6\'cd\'bc\par
+\par
+Plot[\{f1,f2,\'a1\'ad\},\{x,xmin,xmax\},\par
+PlotStyle->\{GrayLevel,GrayLevel[j],\'a1\'ad\}]\par
+\'bb\'d2\'bd\'d7\'bb\'e6\'cd\'bc\par
+\'cd\'bc\'d0\'ce\'b4\'a6\'c0\'ed\'d6\'b8\'c1\'ee\par
+\par
+Show[plot] \'d6\'d8\'bb\'ad\'d2\'bb\'b8\'f6\'cd\'bc\par
+Show[plot1,plot2,\'a1\'ad] \'bd\'ab\'ca\'fd\'d5\'c5\'cd\'bc\'b2\'a2\'b3\'c9\'d2\'bb\'d5\'c5\par
+Show[plot,option->opt] \'bc\'d3\'c8\'eb\'d1\'a1\'cf\'ee\par
+\'cd\'bc\'d0\'ce\'d6\'ae\'c5\'c5\'c1\'d0\par
+\par
+Show[GraphicsArray[\{plot1,plot2,\'a1\'ad\}]] \'bd\'ab\'cd\'bc\'d0\'ce\'ba\'e1\'cf\'f2\'c5\'c5\'c1\'d0\par
+Show[GraphicsArray[\{,,\'a1\'ad\}]] \'bd\'ab\'cd\'bc\'d0\'ce\'b4\'b9\'d6\'b1\'c5\'c5\'c1\'d0\par
+Show[GraphicsArray[\{\{plot1,plot2,\'a1\'ad\},\'a1\'ad\}]] \'bd\'ab\'cd\'bc\'d0\'ce\'b3\'c9\'b6\'fe\'ce\'ac\'be\'d8\'d5\'f3\'ca\'bd\'c5\'c5\'c1\'d0\par
+\'b6\'fe\'ce\'ac\'b2\'ce\'ca\'fd\'cd\'bc\par
+ParametricPlot[\{f1,f2\},\{t,tmin,tmax\}]\par
+\'b2\'ce\'ca\'fd\'bb\'e6\'cd\'bc\par
+ParametricPlot[\{\{f1,f2\},\{g1,g2\},\'a1\'ad\},\{t,tmin,tmax\}]\par
+\'cd\'ac\'ca\'b1\'bb\'e6\'ca\'fd\'b8\'f6\'b2\'ce\'ca\'fd\'cd\'bc\par
+ParametricPlot[\{f1,f2\},\{t,tmin,tmax\},AspectRatio->Automatic]\par
+\'b1\'a3\'b3\'d6\'c7\'fa\'cf\'df\'b5\'c4\'d5\'e6\'d5\'fd\'d0\'ce\'d7\'b4\'a3\'ac\'bc\'b4x,y\'d7\'f8\'b1\'ea\'b1\'c8\'ce\'aa1\'a3\'ba1\par
+\'b5\'c8\'b8\'df\'cf\'df\'cd\'bc\par
+\par
+ContourPlot[f,\{x,xmin,xmax\},\{y,ymin,ymax\}]\par
+\'d3\'da\'d6\'b8\'b6\'a8\'b7\'b6\'ce\'a7\'d6\'ae\'c4\'da\'bb\'ad\'b3\'f6f\'b5\'c4\'b5\'c8\'b8\'df\'cf\'df\'cd\'bc\par
+ContourPlot\'d1\'a1\'cf\'ee\par
+\'d1\'a1\'cf\'ee \'d4\'a4\'c9\'e8\'d6\'b5 \'cb\'b5\'c3\'f7\par
+ColorFunction Automatic \'c9\'cf\'c9\'ab\'b5\'c4\'d4\'a4\'c9\'e8\'d6\'b5\'ce\'aa\'bb\'d2\'bd\'d7\'a3\'ac\'d1\'a1Hue\'d4\'f2\'ce\'aa\'cf\'b5\'c1\'d0\'c9\'ab\'b2\'ca\par
+Contours 10 \'b5\'c8\'b8\'df\'cf\'df\'b5\'c4\'ca\'fd\'c4\'bf\'a1\'a3\'c9\'e8Contours->\{z1,z2,\'a1\'ad\}\'d4\'f2\'d6\'b8\'b6\'a8\'b5\'c8\'b8\'df\'d6\'b5\'ce\'aaz1,z2,\'a1\'ad\par
+ContourShading True Contour\'b5\'c4\'c9\'cf\'c9\'ab\'a3\'ac\'d1\'a1False\'d4\'f2\'b2\'bb\'c9\'cf\'c9\'ab\par
+PlotRange Automatic \'b8\'df\'b6\'c8z\'d6\'b5\'b5\'c4\'b7\'b6\'ce\'a7\'a3\'ac\'d2\'b2\'bf\'c9\'d6\'b8\'b6\'a8\{zmin,zmax\}\par
+7\'c0\'fa\'ca\'b7\'b0\'e6\'b1\'be\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica 10.0.2 2014\par
+\par
+\'d6\'a7\'b3\'d6 OS X 10.9.5 \'ba\'cd OS X 10.10\par
+\'d0\'c2\'d4\'f6 EmbedCode \'d6\'a7\'b3\'d6\'b0\'fc\'c0\'a8 R\'a1\'a2Scala\'a1\'a2Perl \'ba\'cd Ruby \'d4\'da\'c4\'da\'b5\'c4\'d3\'ef\'d1\'d4\par
+\'b6\'d4\'bc\'b8\'ba\'ce\'bc\'c6\'cb\'e3\'b5\'c4\'d0\'c2\'d0\'cd\'d7\'ee\'d3\'c5\'bb\'af\'a1\'a2\'ca\'e4\'c8\'eb\'d6\'a7\'b3\'d6\'a1\'a2\'d0\'d4\'c4\'dc\'cc\'e1\'c9\'fd\'ba\'cd\'b4\'ed\'ce\'f3\'d0\'de\'d5\'fd\par
+\'b0\'fc\'c0\'a8 DocumentDescription\'a1\'a2GeneratedDocumentBinding\'a1\'a2GeneratedDocumentHistoryLength \'d2\'d4\'bc\'b0\'b8\'fc\'b6\'e0\'d3\'c3\'d3\'da DocumentGenerator \'b5\'c4\'b8\'bd\'bc\'d3\'d1\'a1\'cf\'ee\par
+\'d3\'c3\'d3\'da DateFunction\'a1\'a2SunPosition \'ba\'cd MoonPosition \'b5\'c4\'b8\'bd\'bc\'d3\'d1\'a1\'cf\'ee\par
+\'b6\'d4\'cd\'b3\'bc\'c6\'b5\'c4\'d0\'d4\'c4\'dc\'cc\'e1\'c9\'fd\'ba\'cd\'b4\'ed\'ce\'f3\'d0\'de\'d5\'fd\par
+\'bf\'c9\'ca\'d3\'bb\'af\'cf\'e0\'b9\'d8\'b6\'e0\'b4\'a6\'b4\'ed\'ce\'f3\'d0\'de\'d5\'fd\'a1\'a2\'b5\'d8\'cd\'bc\'b5\'c4\'d0\'c2\'d0\'cd\'cd\'bc\'b1\'ea\'a3\'ac\'d2\'d4\'bc\'b0 NumberLinePlot \'b5\'c4\'b8\'fc\'b9\'e3\'b7\'b6\'ce\'a7\'ca\'e4\'c8\'eb\par
+Replace\'a1\'a2ReplaceAll \'ba\'cd ReplacePart \'cf\'d6\'d4\'da\'bf\'c9\'d3\'eb\'b9\'d8\'c1\'aa\'c5\'e4\'ba\'cf\'ca\'b9\'d3\'c3\par
+34 \'d6\'d6\'d0\'c2\'b5\'c4 Interpreter \'c0\'e0\'d0\'cd\par
+Mathematica \'ba\'cd Wolfram Cloud \'d6\'a7\'b3\'d6 ScheduledTask\par
+VerificationTest \'ba\'cd\'b1\'ca\'bc\'c7\'b1\'be\'b2\'e2\'ca\'d4\'b5\'c4\'b2\'bf\'b7\'d6\'d0\'de\'d5\'fd\'ba\'cd\'b8\'fc\'d0\'c2\par
+\'b0\'fc\'c0\'a8 AnimationRunTime \'ba\'cd AnimationTimeIndex \'d4\'da\'c4\'da\'b5\'c4 Animator \'b5\'c4\'d0\'c2\'d1\'a1\'cf\'ee[1] \par
+Mathematica 10.0.1 2014\par
+\par
+\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'b8\'fc\'d0\'c2\'ba\'cd\'d4\'f6\'c7\'bf\'a3\'ac\'b0\'fc\'c0\'a8\'c8\'ab\'d0\'c2\'cd\'bc\'cf\'f1\'d0\'a7\'b9\'fb\'a1\'a2WatershedComponents \'b5\'c4 Image3D \'d1\'a1\'cf\'ee\'ba\'cd\'b6\'d4 Nearest \'ba\'cd FindClusters \'b5\'c4\'c4\'da\'d6\'c3\'d1\'d5\'c9\'ab\'d6\'a7\'b3\'d6\par
+\'bc\'f2\'bb\'af\'b5\'c4 SendMail \'d3\'ef\'b7\'a8\'a3\'ac\'ca\'b9\'d6\'ae\'b8\'fc\'c8\'dd\'d2\'d7\'ca\'b9\'d3\'c3\par
+\'b6\'d4\'cf\'e0\'b9\'d8\'d0\'d4\'ba\'af\'ca\'fd\'c0\'fd\'c8\'e7 Dataset \'ba\'cd Query \'c6\'f4\'d3\'c3\'b5\'c4\'c8\'ab\'d0\'c2\'b2\'d9\'d7\'f7\'b7\'fb\'d3\'eb\'d7\'e9\'ba\'cf\'b2\'d9\'d7\'f7\'b7\'fb\par
+\'b6\'d4 R 3.1 \'b5\'c4 RLink \'bc\'e6\'c8\'dd\'d0\'d4\'b8\'fc\'d0\'c2\par
+\'c8\'ab\'d0\'c2\'bd\'e2\'ca\'cd\'c6\'f7\'c0\'e0\'d0\'cd\'a3\'ac\'c0\'fd\'c8\'e7 Beach\'a1\'a2CountryClass\'a1\'a2OilField \'ba\'cd Reef\par
+\'b6\'d4\'b5\'d8\'c0\'ed\'bc\'c6\'cb\'e3\'ba\'cd\'c7\'f8\'d3\'f2\'b5\'c4\'c8\'ab\'d0\'c2\'d7\'ee\'d3\'c5\'bb\'af\'a1\'a2\'d6\'a7\'b3\'d6\'ca\'e4\'c8\'eb\'ba\'cd\'c2\'b7\'be\'b6\'c0\'e0\'d0\'cd\par
+\'bb\'fa\'c6\'f7\'d1\'a7\'cf\'b0\'ba\'af\'ca\'fd Classify \'ba\'cd Predict \'c4\'bf\'c7\'b0\'d6\'a7\'b3\'d6 NeuralNetwork \'d7\'f7\'ce\'aa\'c4\'da\'d6\'c3\'b7\'d6\'c0\'e0\'b7\'bd\'b7\'a8\par
+\'ce\'c8\'b6\'a8\'d0\'d4\'ba\'cd\'d0\'d4\'c4\'dc\'b5\'c4\'b8\'c4\'c9\'c6\'a3\'ac\'d4\'da\'c8\'ab\'b2\'bf\'c6\'bd\'cc\'a8\'c9\'cf\'cc\'e1\'b8\'df\'d3\'c3\'bb\'a7\'bd\'e7\'c3\'e6\'cc\'e5\'d1\'e9\par
+SemanticImport \'ba\'cd\'d7\'ee\'d3\'c5\'bb\'af\'d6\'d0\'d6\'a7\'b3\'d6\'c0\'e0\'d0\'cd\'b5\'c4\'bd\'f8\'d2\'bb\'b2\'bd\'b8\'b2\'b8\'c7\'a3\'ac\'d3\'c3\'d3\'da\'b4\'a6\'c0\'ed\'c4\'e4\'c3\'fb\'b5\'c4\'c1\'d0\'a1\'a2\'bf\'d5\'d7\'d6\'b6\'ce\'a1\'a2\'ce\'de\'b1\'ed\'cd\'b7\'ca\'fd\'be\'dd\'ba\'cd\'b5\'bc\'c8\'eb\'be\'df\'d3\'d0\'b3\'a4\'ce\'c4\'bc\'fe\'c3\'fb\'b5\'c4\'ce\'c4\'bc\'fe\par
+\'b6\'d4\'b0\'fc\'c0\'a8\'cc\'ec\'c6\'f8\'ca\'fd\'be\'dd\'a1\'a2\'cf\'e0\'b9\'d8\'d0\'d4\'a1\'a2\'b7\'fb\'ba\'c5\'bc\'af\'b3\'c9\'ba\'cd\'d4\'da\'d2\'fe\'ca\'bd\'c7\'f8\'d3\'f2\'c9\'cf\'b5\'c4\'b2\'e2\'c1\'bf\'d6\'b5\'b5\'c8\'b9\'e3\'b7\'ba\'c1\'ec\'d3\'f2\'bc\'c6\'cb\'e3\'b5\'c4\'b8\'fc\'d0\'c2\'ba\'cd\'cc\'e1\'b8\'df\par
+\'b6\'d4\'d1\'a1\'d4\'f1\'b5\'c4\'cd\'bc\'cf\'df\'ba\'cd\'cd\'bc\'b1\'ed\'c0\'e0\'d0\'cd\'d2\'d4\'bc\'b0\'b0\'fc\'c0\'a8 NDSolve\'a1\'a2ParametricNDSolve\'a1\'a2SparseArray \'ba\'cd MatrixExp \'b5\'c4\'ca\'fd \'d6\'b5\'c7\'f3\'bd\'e2\'c6\'f7\'b5\'c4\'ce\'c8\'b6\'a8\'d0\'d4\'ba\'cd\'d0\'d4\'c4\'dc\'b5\'c4\'b8\'fc\'d0\'c2\par
+\'b6\'d4\'b0\'e6\'b1\'be 9 \'bb\'f2\'d5\'df\'b8\'fc\'d4\'e7\'c6\'da\'b0\'e6\'b1\'be\'b5\'c4 InterpolatingFunction \'bc\'e6\'c8\'dd\'d0\'d4\'b5\'c4\'b8\'fc\'d0\'c2[1] \par
+Mathematica 10.0.0 2014\par
+\par
+\'bb\'f9\'d3\'da\'cd\'ea\'d5\'fb Wolfram\'d3\'ef\'d1\'d4\'b5\'c4\'b5\'da\'d2\'bb\'b8\'f6\'b0\'e6\'b1\'be\'a3\'ac\'ba\'ad\'b8\'c7700\'b6\'e0\'b8\'f6\'d0\'c2\'ba\'af\'ca\'fd\par
+\'b8\'df\'b6\'c8\'d7\'d4\'b6\'af\'bb\'af\'b5\'c4\'bb\'fa\'c6\'f7\'d1\'a7\'cf\'b0\'a3\'ac\'b0\'fc\'c0\'a8\'b8\'f7\'d6\'d6\'c8\'ce\'ce\'f1\'b5\'c4\'d4\'a4\'d1\'b5\'c1\'b7\'c4\'a3\'d0\'cd\par
+\'bc\'af\'b3\'c9\'b5\'c4\'bc\'b8\'ba\'ce\'bc\'c6\'cb\'e3\'a3\'ac\'b0\'fc\'c0\'a8\'b7\'fb\'ba\'c5\'ca\'bd\'bc\'b8\'ba\'ce\'a1\'a2\'bb\'f9\'d3\'da\'cd\'f8\'b8\'f1\'b5\'c4\'c7\'f8\'d3\'f2\'ba\'cd\'d2\'d1\'c3\'fc\'c3\'fb\'ba\'cd\'d0\'ce\'ca\'bd\'c7\'f8\'d3\'f2\par
+\'b8\'df\'bc\'b6\'b5\'d8\'c0\'ed\'bc\'c6\'cb\'e3\'a3\'ac\'b0\'fc\'c0\'a8\'c7\'bf\'b4\'f3\'b5\'c4\'d0\'c2\'b5\'d8\'c0\'ed\'cd\'bc\'d0\'ce\'ba\'af\'ca\'fd\'a3\'ac\'d3\'c3\'d3\'da\'b5\'d8\'cd\'bc\'b9\'b9\'bd\'a8\par
+\'c0\'fb\'d3\'c3\'bd\'e1\'b9\'b9\'bb\'af\'ca\'fd\'be\'dd\'bc\'af\'ba\'cf\'d3\'ef\'d2\'e5\'ca\'fd\'be\'dd\'b5\'bc\'c8\'eb\'bc\'c6\'cb\'e3\par
+\'d4\'da\'cd\'f8\'d2\'b3\'c9\'cf\'b4\'b4\'bd\'a8\'ba\'cd\'b2\'bf\'ca\'f0\'c0\'ed\'bd\'e2\'d7\'d4\'c8\'bb\'d3\'ef\'d1\'d4\'ca\'e4\'c8\'eb\'b5\'c4\'b9\'a6\'c4\'dc\par
+\'bb\'f9\'b4\'a1\'d0\'c2\'cf\'e0\'b9\'d8\'d0\'d4\'b9\'b9\'bd\'a8\'d4\'ca\'d0\'ed\'bd\'f8\'d0\'d0\'b8\'df\'d0\'a7\'c2\'ca\'b5\'c4\'b2\'e9\'d5\'d2\'ba\'cd\'b8\'fc\'d0\'c2\par
+\'c0\'a9\'d5\'b9\'cb\'e6\'bb\'fa\'b9\'fd\'b3\'cc\'bf\'f2\'bc\'dc\'a3\'ac\'b0\'fc\'c0\'a8\'d2\'fe\'ca\'bd\'c2\'ed\'bf\'c9\'b7\'f2\'c4\'a3\'d0\'cd\'ba\'cd\'d7\'d4\'b6\'af\'ca\'b1\'bc\'e4\'d0\'f2\'c1\'d0\'b7\'d6\'ce\'f6\par
+\'b7\'fb\'ba\'c5\'ca\'bd\'b1\'ed\'ca\'be\'c8\'d5\'c6\'da\'ba\'cd\'ca\'b1\'bc\'e4\'b5\'c4\'c1\'e9\'bb\'ee\'cf\'b5\'cd\'b3\'a3\'ac\'b2\'a2\'c7\'d2\'bf\'c9\'b6\'d4\'cb\'fc\'c3\'c7\'d6\'b4\'d0\'d0\'bc\'c6\'cb\'e3\par
+\'c4\'da\'d6\'c3\'cd\'bc\'cf\'df\'d6\'f7\'cc\'e2\'a3\'ac\'bf\'c9\'d2\'d4\'c7\'e1\'cb\'c9\'ca\'b5\'cf\'d6\'b6\'d4\'cd\'bc\'cf\'df\'b5\'c4\'b6\'a8\'d6\'c6\'a3\'ac\'c2\'fa\'d7\'e3\'c9\'cc\'d2\'b5\'b1\'a8\'b8\'e6\'b5\'bd\'bc\'bc\'ca\'f5\'ce\'c4\'cf\'d7\'b5\'c8\'b5\'c4\'b8\'f7\'d6\'d6\'d0\'e8\'c7\'f3\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'b6\'fe\'ce\'ac\'ba\'cd\'c8\'fd\'ce\'ac\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'b9\'a6\'c4\'dc\'a3\'ac\'c0\'a9\'d5\'b9\'c1\'cb\'d1\'d5\'c9\'ab\'d6\'a7\'b3\'d6\par
+\'b7\'c7\'cf\'df\'d0\'d4\'bf\'d8\'d6\'c6\'cf\'b5\'cd\'b3\'ba\'cd\'d4\'f6\'c7\'bf\'b5\'c4\'d0\'c5\'ba\'c5\'b4\'a6\'c0\'ed\par
+\'d3\'d0\'cf\'de\'d4\'aa\'a1\'a2\'d4\'f6\'c7\'bf\'b5\'c4\'c6\'ab\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'a1\'a2\'b7\'fb\'ba\'c5\'ca\'bd\'d1\'d3\'b3\'d9\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'ba\'cd\'bb\'ec\'ba\'cf\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\par
+\'d0\'ce\'ca\'bd\'ca\'fd\'d1\'a7\'b2\'d9\'d7\'f7\'b7\'fb\'a1\'a2\'c1\'bf\'b8\'d9\'b1\'e4\'c1\'bf\'ba\'cd\'c0\'a9\'d5\'b9\'b5\'c4\'b4\'fa\'ca\'fd\'ba\'cd\'cd\'bc\'bc\'c6\'cb\'e3\par
+\'d7\'d4\'b6\'af\'b1\'a8\'b8\'e6\'c9\'fa\'b3\'c9\'ba\'cd\'d7\'d6\'b7\'fb\'b4\'ae\'a1\'a2\'ce\'c4\'bc\'fe\'ba\'cd HTML \'c4\'a3\'b0\'e5\par
+\'c1\'ac\'bd\'d3\'cd\'e2\'b2\'bf\'c9\'e8\'b1\'b8\'a1\'a2\'b7\'fe\'ce\'f1\'ba\'cd API\'a3\'ac\'d2\'d4\'bc\'b0 URL \'b2\'d9\'d7\'f7\par
+\'c4\'da\'d6\'c3\'b5\'a5\'ce\'bb\'b2\'e2\'ca\'d4\par
+\'d3\'eb Wolfram Cloud \'bc\'af\'b3\'c9\par
+\'b7\'c3\'ce\'ca\'c0\'a9\'d5\'b9\'b5\'c4 Wolfram Knowledgebase[1] \par
+Mathematica9.0.1 2013\par
+\par
+\'b2\'fa\'c6\'b7\'d6\'d0\'ba\'ad\'b8\'c7\'c1\'cb\'cb\'f9\'d3\'d0\'be\'ab\'d1\'a1\'b7\'b6\'c0\'fd\par
+\'cc\'e1\'b8\'df\'c1\'cb\'bd\'a8\'d2\'e9\'c0\'b8\'b5\'c4\'ce\'c8\'b6\'a8\'d0\'d4\par
+\'bd\'a8\'d2\'e9\'c0\'b8\'cc\'e1\'b9\'a9\'c1\'cb\'b8\'fc\'d7\'bc\'c8\'b7\'b5\'c4\'bd\'a8\'d2\'e9\par
+\'cc\'e1\'b8\'df\'c1\'cb\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'ba\'af\'ca\'fd\'b5\'c4\'d0\'d4\'c4\'dc\'ba\'cd\'ce\'c8\'b6\'a8\'d0\'d4\'a3\'ac\'c0\'a9\'d5\'b9\'c1\'cb\'b6\'d4 Image3D \'b5\'c4\'d6\'a7\'b3\'d6\par
+\'d5\'eb\'b6\'d4 Linux \'c5\'e4\'d6\'c3\'b8\'c4\'c9\'c6\'c1\'cb\'b0\'b2\'d7\'b0\'c1\'f7\'b3\'cc\'ba\'cd\'ce\'c8\'b6\'a8\'d0\'d4\par
+\'cc\'e1\'b8\'df\'c1\'cb\'d0\'ed\'b6\'e0\'cb\'e6\'bb\'fa\'b9\'fd\'b3\'cc\'ba\'af\'ca\'fd\'b5\'c4\'d0\'d4\'c4\'dc\'ba\'cd\'c2\'b3\'b0\'f4\'d0\'d4\par
+\'ca\'e4\'c8\'eb\'d6\'fa\'ca\'d6\'b9\'a6\'c4\'dc\'b5\'c4\'c8\'ab\'b7\'bd\'ce\'bb\'cd\'ea\'c9\'c6\'a3\'ba\'cd\'ea\'c8\'ab\'d6\'a7\'b3\'d6 Linux \'c6\'bd\'cc\'a8\'a3\'ac\'b8\'fc\'ba\'c3\'b5\'d8\'d6\'a7\'b3\'d6\'cb\'ab\'cf\'d4\'ca\'be\'c6\'f7\'a3\'ac\'b8\'fc\'bc\'d1\'b5\'c4\'d1\'a1\'cf\'ee\'d5\'bc\'ce\'bb\'b7\'fb\'a3\'ac\'bc\'f5\'c9\'d9\'c1\'cb\'c8\'df\'d3\'e0\'d1\'a1\'cf\'ee[1] \par
+Mathematica9.0.0 2012\par
+\par
+\'c8\'ab\'d0\'c2 Wolfram \'d4\'a4\'b2\'e2\'bd\'e7\'c3\'e6\'a3\'ac\'b4\'f3\'b7\'f9\'b6\'c8\'cc\'e1\'b8\'df\'c1\'cb Mathematica \'b5\'c4\'b5\'bc\'ba\'bd\'ba\'cd\'cc\'bd\'cb\'f7\'b9\'a6\'c4\'dc\par
+\'b8\'df\'b6\'c8\'bc\'af\'b3\'c9\'b5\'c4\'b5\'a5\'ce\'bb\'d6\'a7\'b3\'d6\'a3\'ac\'b0\'fc\'c0\'a8\'d4\'da\'cd\'bc\'d0\'ce\'ba\'cd\'ca\'fd\'d6\'b5\'d2\'d4\'bc\'b0\'b7\'fb\'ba\'c5\'ca\'bd\'bc\'c6\'cb\'e3\'c9\'cf\'b5\'c4\'d7\'d4\'d3\'c9\'b8\'f1\'ca\'bd\'d3\'ef\'d1\'d4\'ca\'e4\'c8\'eb\'a1\'a2\'b5\'a5\'ce\'bb\'bb\'bb\'cb\'e3\'ba\'cd\'c1\'bf\'b8\'d9\'d2\'bb\'d6\'c2\'d0\'d4\'bc\'ec\'b2\'e9\par
+\'c8\'ab\'d0\'c2\'cd\'bc\'ba\'cd\'cd\'f8\'c2\'e7\'b7\'d6\'ce\'f6\'a3\'ac\'b0\'fc\'c0\'a8\'b5\'bd Facebook\'a1\'a2LinkedIn\'a1\'a2Twitter \'b5\'c8\'b5\'c4\'c4\'da\'d6\'c3\'c1\'b4\'bd\'d3\par
+\'c8\'ab\'d0\'c2\'b5\'c4 Mathematica \'c6\'f3\'d2\'b5\'b0\'e6 \'bf\'c9\'b6\'d4\'d4\'cb\'d0\'d0\'ca\'b1\'b5\'c4\'ca\'b5\'ca\'b1\'ca\'fd\'be\'dd\'bd\'f8\'d0\'d0\'d6\'b1\'bd\'d3\'b5\'c4CDF\'b2\'bf\'ca\'f0 \'a1\'a3\'d4\'a4\'c0\'c0\'c4\'a3\'ca\'bd\'bf\'c9\'c4\'a3\'c4\'e2\'d4\'daCDF Player \'ba\'cd Wolfram Player Pro \'d6\'d0\'b5\'c4\'d0\'a7\'b9\'fb\par
+\'d6\'f7\'d2\'aa\'b5\'c4\'d0\'c2\'ca\'fd\'be\'dd\'bf\'c6\'d1\'a7\'a1\'a2\'b8\'c5\'c2\'ca\'ba\'cd\'cd\'b3\'bc\'c6\'b9\'a6\'c4\'dc\emdash\emdash\emdash\'b0\'fc\'c0\'a8\'c9\'fa\'b4\'e6\'ba\'cd\'bf\'c9\'bf\'bf\'d0\'d4\'b7\'d6\'ce\'f6\'a1\'a2\'c2\'ed\'b6\'fb\'bf\'c9\'b7\'f2\'c1\'b4\'a1\'a2\'b6\'d3\'c1\'d0\'c0\'ed\'c2\'db\'a1\'a2\'ca\'b1\'bc\'e4\'d0\'f2\'c1\'d0\'ba\'cd\'cb\'e6\'bb\'fa\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\par
+\'ca\'b9\'d3\'c3\'c8\'fd\'ce\'ac\'c1\'a2\'cc\'e5\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'ba\'cd\'ba\'cb\'cd\'e2\'bc\'bc\'ca\'f5\'a3\'ac\'d4\'da\'cf\'e0\'b5\'b1\'b4\'f3\'b5\'c4\'b6\'fe\'ce\'ac\'ba\'cd\'c8\'fd\'ce\'ac\'cd\'bc\'cf\'f1\'ba\'cd\'ca\'d3\'c6\'b5\'d6\'d0\'d2\'b2\'be\'df\'d3\'d0\'d7\'bf\'d4\'bd\'b5\'c4\'d0\'d4\'c4\'dc\par
+\'bc\'af\'b3\'c9\'c4\'a3\'c4\'e2\'ba\'cd\'ca\'fd\'d7\'d6\'d0\'c5\'ba\'c5\'b4\'a6\'c0\'ed\par
+\'c4\'da\'d6\'c3\'b7\'fb\'ba\'c5\'ca\'bd\'d5\'c5\'c1\'bf\'a3\'ac\'d6\'a7\'b3\'d6\'c8\'ce\'d2\'e2\'bd\'d7\'ca\'fd\'a1\'a2\'ce\'ac\'b6\'c8\'ba\'cd\'b6\'d4\'b3\'c6\'d0\'d4\'b5\'c4\'ca\'fd\'d7\'e9\par
+\'d3\'c3\'d3\'da\'c3\'e6\'b0\'e5\'ba\'cd\'bf\'d8\'bc\'fe\'b5\'c4\'b8\'df\'b6\'c8\'d7\'d4\'b6\'a8\'d2\'e5\'bd\'bb\'bb\'a5\'ca\'bd\'d2\'c7\'b1\'ed\par
+\'c8\'ab\'cf\'b5\'cd\'b3\'b7\'b6\'ce\'a7\'c4\'da\'d6\'a7\'b3\'d6\'cd\'bc\'cf\'df\'ba\'cd\'cd\'bc\'b1\'ed\'b5\'c4\'d7\'d4\'b6\'af\'cd\'bc\'c0\'fd\par
+R \'b1\'bb\'c8\'ab\'c3\'e6\'bc\'af\'b3\'c9\'c8\'eb Mathematica \'b5\'c4\'b9\'a4\'d7\'f7\'c1\'f7\'b3\'cc\'d6\'d0\'a3\'ac\'bf\'c9\'ca\'b5\'cf\'d6\'ce\'de\'b7\'ec\'b5\'c4\'ca\'fd\'be\'dd\'ba\'cd\'b4\'fa\'c2\'eb\'bd\'bb\'bb\'bb\par
+\'c8\'ab\'c3\'e6\'b5\'c4\'bf\'cd\'bb\'a7\'b6\'cb\'cd\'f8\'d2\'b3\'b7\'c3\'ce\'ca\'a3\'ac\'bf\'c9\'ca\'b5\'cf\'d6\'d3\'eb\'d4\'b6\'b3\'cc\'b7\'fe\'ce\'f1\'c6\'f7\'b5\'c4\'ca\'fd\'be\'dd\'bd\'bb\'bb\'bb\'a3\'ac\'d2\'d4\'bc\'b0\'d3\'eb\'cd\'f8\'d2\'b3 API \'b5\'c4\'bd\'bb\'bb\'a5\par
+\'bb\'c3\'b5\'c6\'c6\'ac\'b5\'c4\'d0\'c2\'cd\'e2\'b9\'db\'a3\'ac\'d2\'d4\'bc\'b0\'d0\'c2\'d1\'f9\'ca\'bd\'c4\'a3\'b0\'e5\'ba\'cd\'b1\'b3\'be\'b0\'cd\'bc\'cf\'f1[1] \par
+\'a1\'a1\'a1\'a1\par
+Mathematica8.0.4 2011\par
+\par
+\'d0\'c2\'b2\'cb\'b5\'a5\'d1\'a1\'cf\'ee\'ba\'cd\'bd\'bb\'bb\'a5\'ca\'bd\'cf\'f2\'b5\'bc\'a3\'ac\'d2\'d4\'ca\'b5\'cf\'d6 CDF \'b2\'bf\'ca\'f0\par
+\'d3\'c3\'d3\'da\'b3\'cc\'d0\'f2\'ca\'bd\'b2\'bf\'ca\'f0 CDF \'ce\'c4\'bc\'fe\'b5\'c4\'d0\'c2\'ba\'af\'ca\'fd CDFInformation \'ba\'cd CDFDeploy\par
+\'d3\'c3\'d3\'da CDF \'e4\'af\'c0\'c0\'c6\'f7\'b2\'e5\'bc\'fe\'b5\'c4\'d0\'c2\'cf\'c2\'d4\'d8\'bd\'f8\'b6\'c8\'d6\'b8\'ca\'be\'c6\'f7\par
+\'b6\'d4 CDF \'e4\'af\'c0\'c0\'c6\'f7\'b2\'e5\'bc\'fe\'d4\'da\'ce\'c8\'b6\'a8\'d0\'d4\'a1\'a2\'cb\'d9\'b6\'c8\'ba\'cd\'b0\'b2\'c8\'ab\'d0\'d4\'b5\'c8\'b7\'bd\'c3\'e6\'b5\'c4\'b8\'c4\'bd\'f8\par
+\'d4\'da Mac OS X Lion\'cf\'c2\'b2\'e2\'ca\'d4\par
+\'b6\'d4 Share \'ba\'af\'ca\'fd\'d4\'da\'b4\'e6\'b4\'a2\'b4\'f3\'d0\'cd\'ca\'fd\'be\'dd\'bc\'af\'ca\'b1\'c4\'da\'b4\'e6\'ca\'b9\'d3\'c3\'b5\'c4\'b8\'c4\'bd\'f8\par
+\'b8\'fc\'d0\'c2\'b5\'c4 MKL \'bf\'e2\'d2\'d4\'b8\'c4\'c9\'c6\'d0\'d4\'c4\'dc\par
+\'d0\'c2\'d3\'ef\'b7\'a8\'d7\'c5\'c9\'ab\'b9\'a6\'c4\'dc\'a3\'ac\'d2\'d4\'cc\'e1\'ca\'be Dynamic \'cf\'c2 Module \'b1\'e4\'c1\'bf\'b5\'c4\'ca\'b9\'d3\'c3\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'d2\'fd\'ce\'c4\'b9\'dc\'c0\'ed\'ba\'af\'ca\'fd\'d0\'d4\'c4\'dc\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'b1\'e0\'d2\'eb\'cc\'f5\'bc\'fe\'d3\'ef\'be\'e4\'cf\'c2\'d3\'c5\'bb\'af\'b1\'e4\'c1\'bf\'b5\'c4\'d0\'d0\'ce\'aa\par
+\'b8\'c4\'bd\'f8\'b5\'b1\'d4\'da\'d0\'c2\'b0\'e6 Linux \'cf\'b5\'cd\'b3\'cf\'c2\'b1\'a3\'b4\'e6\'ce\'b4\'c3\'fc\'c3\'fb\'b1\'ca\'bc\'c7\'b1\'be\'ca\'b1\'c7\'b0\'b6\'cb\'b5\'c4\'d0\'d0\'ce\'aa\par
+\'d4\'da\'b1\'be\'b5\'d8\'bb\'af\'d6\'d0\'ce\'c4\'b0\'e6\'b1\'be\'a3\'a8Windows \'cf\'b5\'cd\'b3\'a3\'a9\'cf\'c2\'a3\'ac\'cc\'e1\'b9\'a9\'c1\'cb\'cd\'ac\'b2\'bd\'b8\'fa\'bd\'f8\'b5\'c4\'d6\'d0\'ce\'c4\'b2\'ce\'bf\'bc\'d7\'ca\'c1\'cf\'d6\'d0\'d0\'c4[1] \par
+Mathematica8.0.1 2011\par
+\par
+\'b6\'d4\'b5\'bc\'b3\'f6\'b7\'d6\'b2\'bc\'b5\'c4\'d0\'ed\'b6\'e0\'d0\'c2\'b5\'c4\'d7\'d4\'b6\'af\'bb\'af\'bc\'f2\'a3\'ac\'b0\'fc\'c0\'a8\'b7\'c2\'c9\'e4\'b1\'e4\'bb\'bb\'a1\'a2\'b1\'e4\'c1\'bf\'c7\'f3\'ba\'cd\'a1\'a2\'b2\'ce\'ca\'fd\'bb\'ec\'ba\'cf\'d2\'d4\'bc\'b0\'c9\'be\'bd\'d8\'ba\'cd\'bd\'d8\'b6\'cf\'b7\'d6\'b2\'bc\par
+\'b8\'c4\'bd\'f8 Dot \'d4\'da\'d3\'c9\'d5\'fb\'ca\'fd\'d7\'e9\'b3\'c9\'b5\'c4\'b4\'f3\'d0\'cd\'a3\'a8> 1,000,000 \'b8\'f6\'d4\'aa\'cb\'d8\'a3\'a9\'c1\'d0\'b1\'ed\'cf\'c2\'b5\'c4\'bd\'e1\'b9\'fb\par
+\'cd\'a8\'b9\'fd\'d2\'fd\'c8\'eb\'d0\'c2\'b0\'e6 Intel Math Kernel Library \'b8\'c4\'bd\'f8 Intel Sandy BridgeCPU \'cf\'c2\'b5\'c4\'ce\'c8\'b6\'a8\'d0\'d4\par
+\'b8\'c4\'bd\'f8\'d0\'ed\'b6\'e0\'cd\'bc\'ba\'cd\'cd\'f8\'c2\'e7\'b2\'d9\'d7\'f7\'b5\'c4\'d0\'d4\'c4\'dc\'ba\'cd\'c2\'b3\'b0\'f4\'d0\'d4\par
+\'b8\'c4\'bd\'f8\'c1\'cb\'c7\'b0\'b6\'cb\'b5\'c4\'c6\'f4\'b6\'af\'ca\'b1\'bc\'e4\par
+\'b8\'c4\'bd\'f8\'c1\'cb\'d4\'da\'c4\'b3\'d0\'a9\'cc\'d8\'ca\'e2\'cd\'f8\'c2\'e7\'cc\'f5\'bc\'fe\'cf\'c2\'a3\'acMathLink TCPIP \'c1\'ac\'bd\'d3\'b5\'c4\'b4\'b4\'bd\'a8\par
+\'b8\'c4\'bd\'f8\'b4\'d3 Real \'ba\'cd "Real32" \'cd\'bc\'cf\'f1\'b5\'bd TIFF \'b5\'c4\'b5\'bc\'b3\'f6\'a3\'ac\'d2\'d4\'b1\'e3\'d3\'eb\'b8\'fc\'b6\'e0\'cd\'e2\'b2\'bf TIFF \'cd\'bc\'cf\'f1\'ca\'d3\'b4\'b0\'bc\'e6\'c8\'dd\par
+\'cd\'a8\'b9\'fd\'d2\'fd\'c8\'eb\'b8\'fc\'b6\'e0\'b5\'c4 64 \'ce\'bb\'d7\'e9\'bc\'fe\'a3\'ac\'b8\'c4\'bd\'f8 Home Edition \'b5\'c4\'b9\'a6\'c4\'dc\'ba\'cd\'ce\'c8\'b6\'a8\'d0\'d4\par
+\'d4\'da\'b1\'be\'b5\'d8\'bb\'af\'d6\'d0\'ce\'c4\'b0\'e6\'b1\'be\'a3\'a8Windows \'cf\'b5\'cd\'b3\'a3\'a9\'cf\'c2\'a3\'ac\'cc\'e1\'b9\'a9\'c1\'cb\'b8\'df\'d6\'ca\'c1\'bf\'b5\'c4\'d6\'d0\'ce\'c4\'d3\'c3\'bb\'a7\'bd\'e7\'c3\'e6\'ba\'cd\'d6\'d0\'ce\'c4\'b2\'ce\'bf\'bc\'d7\'ca\'c1\'cf\'d6\'d0\'d0\'c4[1] \par
+Mathematica8.0 2010\par
+\par
+\'d3\'eb Wolfram Alpha\'bc\'af\'b3\'c9\par
+\'d7\'d4\'b6\'af\'b8\'c5\'c2\'ca\'ba\'cd\'c6\'da\'cd\'fb\'bc\'c6\'cb\'e3\par
+\'b3\'ac\'b9\'fd\'d2\'bb\'b0\'d9\'d6\'d6\'d0\'c2\'cd\'b3\'bc\'c6\'b7\'d6\'b2\'bc\'ba\'cd\'d0\'ed\'b6\'e0\'cd\'b3\'bc\'c6\'bf\'c9\'ca\'d3\'bb\'af\'b9\'a6\'c4\'dc\par
+\'d6\'b1\'bd\'d3\'c0\'b4\'d7\'d4\'ca\'fd\'be\'dd\'a1\'a2\'b9\'ab\'ca\'bd\'bb\'f2\'d5\'df\'c6\'e4\'cb\'fb\'b7\'d6\'b2\'bc\'b5\'c4\'d0\'c2\'cd\'b3\'bc\'c6\'b7\'d6\'b2\'bc\'b5\'c4\'c9\'fa\'b3\'c9\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'cd\'bc\'ba\'cd\'cd\'f8\'c2\'e7\'d2\'d4\'bc\'b0\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'b9\'a6\'c4\'dc\par
+60 \'b6\'e0\'d6\'d6\'c6\'e6\'d2\'ec\'b9\'c9\'c6\'b1\'c6\'da\'c8\'a8\'c7\'f3\'bd\'e2\'c6\'f7\'a3\'ac\'d2\'d4\'bc\'b0 100 \'b6\'e0\'b8\'f6\'c4\'da\'d6\'c3\'bd\'f0\'c8\'da\'d6\'b8\'b1\'ea\par
+\'c4\'da\'d6\'c3\'bf\'d8\'d6\'c6\'cf\'b5\'cd\'b3\'b9\'a6\'c4\'dc\par
+\'d4\'f6\'c7\'bf\'cd\'bc\'cf\'f1\'b7\'d6\'ce\'f6\'b9\'a6\'c4\'dc\par
+\'bc\'af\'b3\'c9\'d0\'a1\'b2\'a8\'b7\'d6\'ce\'f6\par
+\'c4\'da\'d6\'c3 CUDA \'ba\'cd OpenCL \'d6\'a7\'b3\'d6\par
+\'d7\'d4\'b6\'af C \'b4\'fa\'c2\'eb\'c9\'fa\'b3\'c9\par
+\'b7\'fb\'ba\'c5 C \'b4\'fa\'c2\'eb\'b2\'d9\'d7\'f7\'ba\'cd\'d3\'c5\'bb\'af\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'b6\'fe\'ce\'ac\'ba\'cd\'c8\'fd\'ce\'ac\'cd\'bc\'d0\'ce\'a3\'ac\'b0\'fc\'c0\'a8\'ce\'c6\'c0\'ed\'d3\'b3\'c9\'e4\'ba\'cd\'ca\'b9\'d3\'c3\'d3\'b2\'bc\'fe\'bc\'d3\'cb\'d9\'b5\'c4\'c8\'fd\'ce\'ac\'e4\'d6\'c8\'be\par
+\'c4\'da\'d6\'c3\'cd\'f8\'d2\'b3\'e4\'af\'c0\'c0\'c6\'f7\'b2\'e5\'bc\'fe[1] \par
+Mathematica7.0.1 2009\par
+\par
+\'d4\'f6\'c7\'bf\'ba\'cb\'d0\'c4\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'ba\'af\'ca\'fd\'b5\'c4\'d0\'d4\'c4\'dc\par
+\'d3\'d2\'bc\'fc\'b5\'e3\'bb\'f7\'b2\'cb\'b5\'a5\'a3\'ac\'d2\'d4\'ca\'b5\'cf\'d6\'bf\'ec\'cb\'d9\'cd\'bc\'cf\'f1\'b2\'d9\'d7\'f7\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'bd\'cc\'b3\'cc\'a1\'a2\ldblquote How to\rdblquote\'d6\'b8\'c4\'cf\'ba\'cd\'ca\'d3\'c6\'b5\par
+\'ce\'c4\'b5\'b5\'d6\'d0\'cc\'e1\'b9\'a9\'c1\'cb\'ca\'fd\'c7\'a7\'b8\'f6\'d0\'c2\'b5\'c4\'ca\'be\'c0\'fd\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'ce\'c4\'b5\'b5\'cb\'d1\'cb\'f7\par
+\'d3\'eb Windows 7 \'cf\'c2\'ca\'fd\'d1\'a7\'ca\'d6\'d0\'b4\'ca\'b6\'b1\'f0\'b9\'a6\'c4\'dc\'b5\'c4\'bc\'af\'b3\'c9\par
+\'d3\'eb\'bc\'b4\'bd\'ab\'cd\'c6\'b3\'f6\'b5\'c4 gridMathematica Server \'b5\'c4\'bc\'af\'b3\'c9\par
+\'d4\'da\'b1\'be\'b5\'d8\'bb\'af\'d6\'d0\'ce\'c4\'b0\'e6\'b1\'be\'a3\'a8Windows \'cf\'b5\'cd\'b3\'a3\'a9\'cf\'c2\'a3\'ac\'cc\'e1\'b9\'a9\'c1\'cb\'cd\'ea\'d5\'fb\'b5\'c4\'d6\'d0\'ce\'c4\'b0\'e6\'ba\'af\'ca\'fd\'ba\'cd\'d6\'b8\'c4\'cf\'d2\'b3\'c3\'e6[1] \par
+\'a1\'a1\'a1\'a1\par
+Mathematica7.0 2008\par
+\par
+\'c4\'da\'d6\'c3\'b2\'a2\'d0\'d0\'b8\'df\'d0\'d4\'c4\'dc\'bc\'c6\'cb\'e3\'a3\'a8HPC\'a3\'a9\par
+\'bc\'af\'b3\'c9\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'b0\'b4\'d0\'e8\'b6\'a8\'d6\'c6\'b5\'c4\'be\'ab\'d1\'a1\'d7\'a8\'d2\'b5\'ca\'fd\'be\'dd\'a3\'ac\'b0\'fc\'c0\'a8\'bb\'f9\'d2\'f2\'ca\'fd\'be\'dd\'a1\'a2\'b5\'b0\'b0\'d7\'d6\'ca\'ca\'fd\'be\'dd\'ba\'cd\'b5\'b1\'c7\'b0\'d2\'d4\'bc\'b0\'c0\'fa\'ca\'b7\'c6\'f8\'cf\'f3\'ca\'fd\'be\'dd\par
+\'d0\'ed\'b6\'e0\'c8\'ab\'d0\'c2\'b9\'a6\'c4\'dc\'a3\'ac\'b1\'e3\'d3\'da\'d3\'c3\'bb\'a7\'ca\'b9\'d3\'c3\'a3\'ac\'cc\'e1\'b8\'df\'b9\'a4\'d7\'f7\'d0\'a7\'c2\'ca\par
+\'cd\'bc\'b1\'ed\'ba\'cd\'d0\'c5\'cf\'a2\'bf\'c9\'ca\'d3\'bb\'af\par
+\'ca\'b8\'c1\'bf\'b3\'a1\'bf\'c9\'ca\'d3\'bb\'af\par
+\'c8\'ab\'c3\'e6\'d6\'a7\'b3\'d6\'d1\'f9\'cc\'f5\'bc\'bc\'ca\'f5\'a3\'ac\'b0\'fc\'c0\'a8 NURBS\par
+\'c2\'fa\'d7\'e3\'b9\'a4\'d2\'b5\'c7\'bf\'b6\'c8\'b5\'c4\'b2\'bc\'b6\'fb\'bc\'c6\'cb\'e3\par
+\'cd\'b3\'bc\'c6\'c4\'a3\'d0\'cd\'b7\'d6\'ce\'f6\par
+\'bc\'af\'b3\'c9\'b2\'e2\'b5\'d8\'d1\'a7\'ba\'cd\'b5\'d8\'c0\'ed\'d0\'c5\'cf\'a2\'cf\'b5\'cd\'b3\'ca\'fd\'be\'dd\par
+\'b7\'fb\'ba\'c5\'ca\'bd\'bc\'c6\'cb\'e3\'b7\'bd\'c3\'e6\'b5\'c4\'d0\'ed\'b6\'e0\'cd\'bb\'c6\'c6\'a3\'ac\'b0\'fc\'c0\'a8\'c0\'eb\'c9\'a2\'ce\'a2\'bb\'fd\'b7\'d6\'a1\'a2\'d0\'f2\'c1\'d0\'ca\'b6\'b1\'f0\'ba\'cd\'b3\'ac\'d4\'bd\'b8\'f9[1] \par
+Mathematica6.0.3 2008\par
+\par
+\'b6\'d4\'b2\'ce\'bf\'bc\'d7\'ca\'c1\'cf\'d6\'d0\'d0\'c4\'cc\'ed\'bc\'d3 standard extra packages \'b5\'c4\'cd\'ea\'d5\'fb\'c1\'d0\'b1\'ed\par
+\'b8\'c4\'bd\'f8\'b3\'cc\'d0\'f2\'b0\'fc\'b5\'c4\'ce\'c4\'b5\'b5\par
+\'b8\'c4\'bd\'f8 MatrixForm \'ba\'cd TableForm \'b5\'c4\'d1\'a1\'cf\'ee\'b4\'a6\'c0\'ed\par
+\'b8\'c4\'bd\'f8 Manipulate \'b0\'fc\'ba\'ac\'d1\'a1\'d6\'d0\'cd\'bc\'d0\'ce\'ca\'b1\'b5\'c4\'c7\'b0\'b6\'cb\'ce\'c8\'b6\'a8\'d0\'d4\par
+\'b8\'c4\'bd\'f8 ListPlot \'b5\'c4\'d1\'a1\'cf\'ee\'b4\'a6\'c0\'ed\par
+\'b8\'c4\'bd\'f8 AxesLabel \'ba\'cd Ticks \'d7\'e9\'ba\'cf\'b5\'c4\'b4\'a6\'c0\'ed\par
+\'b8\'c4\'bd\'f8\'b5\'b0\'b0\'d7\'d6\'ca\'ca\'fd\'be\'dd\'bf\'e2\'a3\'a8Protein Data Bank\'a3\'ac\'cb\'f5\'d0\'b4\'ce\'aa PDB\'a3\'a9\'d6\'d0\'ce\'de\'bc\'e4\'b8\'f4\'ca\'fd\'d6\'b5\'ca\'fd\'be\'dd\'b5\'bc\'c8\'eb\'b5\'c4\'b4\'a6\'c0\'ed\par
+LightWave Object\'a3\'a8LWO\'a3\'a9\'d6\'d0\'b2\'a8\'b6\'af\'b5\'c4\'b5\'bc\'b3\'f6\'b8\'fc\'ba\'c3\'b5\'d8\'b7\'fb\'ba\'cf\'c1\'cb\'b9\'a4\'d2\'b5\'bd\'e7\'b1\'ea\'d7\'bc\par
+\'c0\'fb\'d3\'c3\'ba\'cf\'b3\'c9\'b4\'b0\'bf\'da\'b9\'dc\'c0\'ed\'c6\'f7\'a3\'a8\'b1\'c8\'c8\'e7 Compiz\'a3\'a9\'a3\'ac\'b8\'c4\'bd\'f8 Linux \'d6\'d0\'b5\'c4\'bb\'a5\'b6\'af\'d0\'d4\par
+\'b8\'c4\'bd\'f8 Ubuntu Hardy \'ba\'cd Fedora Core 9 \'c9\'cf\'b5\'c4\'d7\'d6\'cc\'e5\'b4\'a6\'c0\'ed[1] \par
+Mathematica6.0.2 2008\par
+\par
+\'d0\'c2\'b5\'c4\'d0\'e9\'c4\'e2\'c8\'ab\'ca\'e9\'ce\'c4\'b5\'b5\'a3\'ac\'ba\'ac\'d3\'d0\'b8\'fc\'d0\'c2\'b5\'c4 Mathematica Book \'c4\'da\'c8\'dd\par
+\'d0\'c2\'b5\'c4\'ba\'af\'ca\'fd\'e4\'af\'c0\'c0\'c6\'f7\'a3\'ac\'b6\'d4\'cb\'f9\'d3\'d0 Mathematica \'b6\'d4\'cf\'f3\'cc\'e1\'b9\'a9\'c1\'cb\'d2\'d7\'d3\'da\'e4\'af\'c0\'c0\'b5\'c4\'b8\'c5\'ca\'f6\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'ce\'c4\'b5\'b5\'b4\'a6\'c0\'ed\'b9\'a6\'c4\'dc\'a3\'ac\'b0\'fc\'c0\'a8\'d0\'d4\'c4\'dc\'cc\'e1\'c9\'fd\'a1\'a2\'cb\'f7\'d2\'fd\'bb\'af\'ba\'cd\'c1\'b4\'bd\'d3\'c2\'b7\'be\'b6\par
+\'d3\'a2\'cc\'d8\'b6\'fb Macs \'c6\'bd\'cc\'a8\'c9\'cf\'cd\'ea\'c8\'ab\'b5\'c4 64 \'ce\'bb\'d0\'d4\'c4\'dc\par
+\'cc\'e1\'c9\'fd\'d4\'da Mac \'ba\'cd Unix \'c6\'bd\'cc\'a8\'c9\'cf Import \'ba\'cd Export \'d7\'aa\'bb\'bb\'c6\'f7\'b5\'c4\'d0\'d4\'c4\'dc\par
+\'cf\'d4\'d6\'f8\'cc\'e1\'c9\'fd\'b5\'bc\'c8\'eb\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd\'ce\'c4\'bc\'fe\'b5\'c4\'cb\'d9\'b6\'c8\par
+\'b5\'b1\'b5\'bc\'b3\'f6\'ce\'aa TEX \'ba\'cd PDF \'b8\'f1\'ca\'bd\'ca\'b1\'a3\'ac\'b8\'c4\'bd\'f8\'cd\'bc\'d0\'ce\'b4\'a6\'c0\'ed\'b9\'a6\'c4\'dc\par
+\'d4\'f6\'c7\'bf\'b6\'d4\'c0\'b4\'d7\'d4 FITS \'cc\'ec\'ce\'c4\'cd\'bc\'cf\'f1\'ce\'c4\'bc\'fe\'b5\'c4\'d4\'aa\'ca\'fd\'be\'dd\'b5\'c4\'b5\'bc\'c8\'eb\par
+\'d0\'c2\'b5\'c4\'d7\'f8\'b1\'ea\'d1\'a1\'d4\'f1\'b9\'a4\'be\'df\'a3\'ac\'b2\'a2\'c7\'d2\'b8\'c4\'bd\'f8\'c1\'cb\'bb\'a5\'b6\'af\'cd\'bc\'d0\'ce\'b5\'c4\'cd\'bc\'d0\'ce\'d1\'a1\'d4\'f1\'cd\'bb\'b3\'f6\'cf\'d4\'ca\'be\'d0\'a7\'b9\'fb[1] \par
+Mathematica6.0.1 2008\par
+\par
+\'d3\'c3\'d3\'da\'bb\'a5\'c1\'aa\'cd\'f8\'c1\'ac\'bd\'d3\'b5\'c4\'d4\'f6\'c7\'bf\'b5\'c4\'d7\'d4\'b6\'af\'ba\'cd\'ca\'d6\'b6\'af\'b4\'fa\'c0\'ed\'c9\'e8\'d6\'c3\par
+\'b6\'d4\'be\'c9\'b0\'e6 Mathematica \'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'b8\'fc\'c9\'ee\'c8\'eb\'b8\'fc\'cf\'ea\'cf\'b8\'b5\'d8\'ce\'c4\'b5\'b5\'bb\'af\par
+\'cf\'d4\'d6\'f8\'b8\'c4\'bd\'f8\'d4\'da Mac \'c6\'bd\'cc\'a8\'c9\'cf\'ba\'cd Unix \'cf\'b5\'cd\'b3\'c9\'cf MathLink \'b5\'c4\'d0\'d4\'c4\'dc\par
+\'b8\'c4\'bd\'f8\'b8\'f7\'d6\'d6 Import \'ba\'cd Export \'d7\'aa\'bb\'bb\'c6\'f7\'b5\'c4\'d0\'d4\'c4\'dc\par
+\'d4\'da\'b4\'f3\'c1\'bf\'b5\'e3\'ca\'fd\'b5\'c4\'c7\'e9\'bf\'f6\'cf\'c2\'a3\'ac\'b8\'fc\'bf\'ec\'b5\'c4 ListPlot\'a1\'a2ListPlot3D \'ba\'cd Plot3D\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'b0\'ef\'d6\'fa\'cf\'b5\'cd\'b3\'b3\'f5\'ca\'bc\'bb\'af\par
+\'c0\'a9\'d5\'b9 Import \'b5\'c4\'d7\'d4\'b6\'af\'ce\'c4\'bc\'fe\'c0\'e0\'d0\'cd\'ca\'b6\'b1\'f0\'b9\'a6\'c4\'dc\par
+\'cd\'ea\'c8\'ab\'d6\'a7\'b3\'d6\'bf\'c9\'cb\'f5\'b7\'c5\'b5\'c4 FontSize \'d6\'b5\par
+\'d4\'f6\'c7\'bf Table\'a1\'a2CSV\'a1\'a2TSV \'ba\'cd MathML \'b5\'bc\'c8\'eb\par
+\ldblquote\'bc\'c6\'cb\'e3\'b1\'ca\'bc\'c7\'b1\'be\rdblquote\'b2\'cb\'b5\'a5\'cf\'ee\'d3\'eb\ldblquote\'cb\'f5\'b7\'c5\rdblquote\'d7\'d3\'b2\'cb\'b5\'a5\par
+\'b6\'ee\'cd\'e2\'b5\'c4 Mathematica \'ba\'af\'ca\'fd\'b7\'b6\'c0\'fd\'ba\'cd\'bd\'cc\'b3\'cc\par
+\'b8\'fc\'d0\'c2\'b5\'c4\'be\'ab\'d1\'a1\'d7\'a8\'d2\'b5\'ca\'fd\'be\'dd\par
+\'ca\'d7\'b4\'ce\'cd\'c6\'b3\'f6\'cf\'e0\'d3\'a6\'b5\'c4\'d6\'d0\'ce\'c4\'b0\'e6[1] \par
+Mathematica6.0 2007\par
+\par
+\'b6\'af\'cc\'ac\'bd\'bb\'bb\'a5\'d0\'d4\'a3\'ac\'d4\'ca\'d0\'ed\'b4\'d3\'b5\'a5\'d0\'d0\'ca\'e4\'c8\'eb\'b4\'b4\'bd\'a8\'b8\'b4\'d4\'d3\'b5\'c4\'bb\'a5\'b6\'af\'bd\'e7\'c3\'e6\par
+\'be\'df\'d3\'d0\'b8\'df\'b6\'c8\'d3\'b0\'cf\'ec\'c1\'a6\'b5\'c4\'d7\'d4\'ca\'ca\'d3\'a6\'bf\'c9\'ca\'d3\'bb\'af\'a3\'ac\'d2\'d4\'ca\'b5\'cf\'d6\'b8\'df\'b1\'a3\'d5\'e6\'ba\'af\'ca\'fd\'ba\'cd\'ca\'fd\'be\'dd\'cd\'bc\'d0\'ce\'b5\'c4\'d7\'d4\'b6\'af\'b4\'b4\'bd\'a8\par
+\'ca\'fd\'be\'dd\'bc\'af\'b3\'c9\'d3\'ef\'d1\'d4\'a3\'ac\'b0\'fc\'c0\'a8\'ca\'fd\'b0\'d9\'d6\'d6\'b1\'ea\'d7\'bc\'ca\'fd\'be\'dd\'b8\'f1\'ca\'bd\'b5\'c4\'d7\'d4\'b6\'af\'bc\'af\'b3\'c9\par
+\'b0\'b4\'d0\'e8\'bc\'d3\'d4\'d8\'b5\'c4\'be\'ab\'d1\'a1\'d7\'a8\'d2\'b5\'ca\'fd\'be\'dd\'a3\'ac\'c3\'e6\'cf\'f2\'ca\'fd\'d1\'a7\'a1\'a2\'ce\'ef\'c0\'ed\'a1\'a2\'bb\'af\'d1\'a7\'a1\'a2\'bd\'f0\'c8\'da\'a1\'a2\'b5\'d8\'c0\'ed\'a1\'a2\'d3\'ef\'d1\'d4\'d1\'a7\'b5\'c8\'b5\'c8\par
+\'b7\'fb\'ba\'c5\'ca\'bd\'bd\'e7\'c3\'e6\'b9\'b9\'bd\'a8\'a3\'ac\'d3\'c3\'d3\'da\'b4\'d3\'bc\'f2\'b5\'a5\'b3\'cc\'d0\'f2\'ca\'b5\'cf\'d6\'c8\'ce\'d2\'e2\'bd\'e7\'c3\'e6\'b5\'c4\'bc\'b4\'ca\'b1\'b9\'b9\'bd\'a8\par
+\'d7\'d4\'b6\'af\'bc\'c6\'cb\'e3\'c3\'c0\'d1\'a7\'a3\'ac\'b0\'fc\'c0\'a8\'ca\'d3\'be\'f5\'cf\'d4\'ca\'be\'b5\'c4\'cb\'e3\'b7\'a8\'d7\'ee\'d3\'c5\'bb\'af\par
+\'bb\'a5\'b6\'af\'cd\'bc\'d0\'ce\'ba\'cd\'bf\'d8\'bc\'fe\'d3\'eb\'ce\'c4\'b1\'be\'c1\'f7\'ba\'cd\'ca\'e4\'c8\'eb\'c1\'f7\'b5\'c4\'ba\'cf\'b3\'c9[1] \par
+Mathematica5.2 2005\par
+\par
+\'d6\'a7\'b3\'d6\'cb\'f9\'d3\'d0\'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4 64 \'ce\'bb\'d1\'a1\'d6\'b7\par
+\'ca\'b5\'cf\'d6\'d4\'da\'b8\'f7\'d6\'d6\'d6\'f7\'d2\'aa\'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4\'b6\'e0\'ba\'cb\'d6\'a7\'b3\'d6\par
+\'b6\'e0\'cf\'df\'b3\'cc\'ca\'fd\'d6\'b5\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\par
+64 \'ce\'bb\'d4\'f6\'c7\'bf\'b0\'e6\'c8\'ce\'d2\'e2\'be\'ab\'b6\'c8\'ca\'fd\'d6\'b5\'bc\'c6\'cb\'e3\par
+\'bb\'f9\'d3\'da\'cf\'f2\'c1\'bf\'b5\'c4\'d0\'d4\'c4\'dc\'d4\'f6\'c7\'bf\par
+\'d7\'d4\'b6\'af\'b6\'fe\'bd\'f8\'d6\'c6\'b0\'b2\'d7\'b0\'d1\'a1\'d4\'f1\par
+\'c5\'e4\'cc\'d7\'b5\'c4\'b1\'ca\'bc\'c7\'b1\'be\'cb\'f7\'d2\'fd\'bc\'bc\'ca\'f5\'a3\'ac\'b1\'e3\'d3\'da\'d7\'c0\'c3\'e6\'cb\'d1\'cb\'f7\par
+\'b0\'b2\'c8\'ab\'d4\'b6\'b3\'cc\'c4\'da\'ba\'cb\'b5\'c4 SSH \'d6\'a7\'b3\'d6\par
+vCard \'ba\'cd RSS \'b5\'bc\'c8\'eb\par
+\'d3\'c3\'d3\'da\'b7\'fb\'ba\'c5\'ca\'bd\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'b5\'c4\'d0\'c2\'cb\'e3\'b7\'a8\par
+\'cf\'df\'d0\'d4\'b6\'aa\'b7\'ac\'cd\'bc\'cf\'b5\'cd\'b3\'b5\'c4\'d0\'d4\'c4\'dc\'d4\'f6\'c7\'bf\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'b6\'fe\'b4\'ce\'c1\'bf\'b4\'ca\'cf\'fb\'b3\'fd\par
+\'d6\'a7\'b3\'d6\'b8\'df\'bc\'b6\'cc\'d8\'ca\'e2\'ba\'af\'ca\'fd\'b5\'c4\'c6\'e6\'d2\'ec\'bd\'e2\par
+\'d4\'f6\'c7\'bf\'b5\'c4\'cd\'b3\'bc\'c6\'cd\'bc\'b1\'ed\par
+MathematicaMark 5.2 \'bb\'f9\'d7\'bc\'cf\'d6\'d2\'d1\'ba\'ad\'b8\'c7\'cd\'f8\'b8\'f1\'ba\'cd\'bc\'af\'c8\'ba[1] \par
+Mathematica5.1 2004\par
+\par
+\'c2\'fa\'d7\'e3\'b9\'a4\'d2\'b5\'bd\'e7\'b1\'ea\'d7\'bc\'b5\'c4\'d7\'d6\'b7\'fb\'b4\'ae\'b2\'d9\'d7\'f7\par
+\'c4\'da\'d6\'c3\'cd\'a8\'d3\'c3\'ca\'fd\'be\'dd\'bf\'e2\'c1\'ac\'bd\'d3\par
+\'b8\'df\'b6\'c8\'d3\'c5\'bb\'af\'b5\'c4\'b6\'fe\'bd\'f8\'d6\'c6\'ca\'fd\'be\'dd I/O\par
+\'b6\'ee\'cd\'e2\'b5\'bc\'c8\'eb\'b5\'bc\'b3\'f6\'b8\'f1\'ca\'bd\'a3\'ac\'b0\'fc\'c0\'a8 XLS \'ba\'cd AVI\par
+\'d6\'a7\'b3\'d6\'bc\'af\'b3\'c9\'cd\'f8\'d2\'b3\'b7\'fe\'ce\'f1\par
+\'b6\'fe\'ce\'ac\'ba\'cd\'c8\'fd\'ce\'ac\'d7\'d4\'b6\'af\'cd\'f8\'c2\'e7\'bf\'c9\'ca\'d3\'bb\'af\par
+\'b8\'df\'d0\'d4\'c4\'dc\'ca\'fd\'d7\'e9\'bf\'c9\'ca\'d3\'bb\'af\par
+\'ca\'fd\'d6\'b5\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'d0\'d4\'c4\'dc\'d4\'f6\'c7\'bf\par
+\'c8\'ab\'c3\'e6\'bc\'af\'b3\'c9\'b5\'c4\'b7\'d6\'b6\'ce\'ba\'af\'ca\'fd\par
+\'ca\'b5\'cf\'d6\'d4\'da\'d2\'fe\'ca\'bd\'b6\'a8\'d2\'e5\'b5\'c4\'c7\'f8\'d3\'f2\'c4\'da\'b5\'c4\'bb\'fd\'b7\'d6\'d4\'cb\'cb\'e3\par
+\'ca\'fd\'d6\'b5\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'d6\'d0\'b5\'c4\'ca\'c2\'bc\'fe\'b4\'a6\'c0\'ed\par
+\'b7\'fb\'ba\'c5\'ca\'bd\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'d0\'c2\'cb\'e3\'b7\'a8\par
+\'d4\'f6\'bc\'d3\'be\'db\'c0\'e0\'b7\'d6\'ce\'f6\'b9\'a6\'c4\'dc\par
+\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'b5\'c4\'bb\'a5\'b6\'af\'cc\'bd\'cb\'f7\'b9\'a4\'be\'df\par
+MathematicaMark \'bb\'f9\'d7\'bc\'b9\'a4\'be\'df\par
+\'c4\'da\'d6\'c3 GUIKit \'bd\'e7\'c3\'e6\'ba\'cd\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'c9\'fa\'b3\'c9\'c6\'f7[1] \par
+Mathematica5.0 2003\par
+\par
+\'cd\'a8\'b9\'fd\'d3\'c5\'bb\'af\'b4\'a6\'c0\'ed\'c6\'f7\'ca\'b5\'cf\'d6\'ca\'fd\'d6\'b5\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'c7\'f3\'bd\'e2\'cb\'d9\'b6\'c8\'b5\'c4\'c7\'b0\'cb\'f9\'ce\'b4\'d3\'d0\'b5\'c4\'cc\'e1\'c9\'fd\par
+\'b8\'df\'cb\'d9\'cf\'a1\'ca\'e8\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'b5\'c4\'c8\'ab\'c3\'e6\'d6\'a7\'b3\'d6\par
+\'b3\'a3\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'ba\'cd\'c6\'ab\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'b5\'c4\'d0\'c2\'d2\'bb\'b4\'fa\'d3\'c5\'bb\'af\'ca\'fd\'d6\'b5\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'d4\'da\'b2\'bb\'cd\'ac\'d3\'f2\'c4\'da\'b7\'fb\'ba\'c5\'ca\'bd\'c7\'f3\'bd\'e2\'b7\'bd\'b3\'cc\'ba\'cd\'b2\'bb\'b5\'c8\'ca\'bd\'b5\'c4\'d6\'f7\'d2\'aa\'d0\'c2\'cb\'e3\'b7\'a8\par
+\'c8\'ab\'c3\'e6\'bc\'af\'b3\'c9\'b5\'c4\'ce\'a2\'b7\'d6\'b4\'fa\'ca\'fd\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'b8\'df\'d0\'d4\'c4\'dc\'d7\'ee\'d3\'c5\'bb\'af\'ba\'cd\'cf\'df\'d0\'d4\'b9\'e6\'bb\'ae\'bc\'bc\'ca\'f5\'a3\'ac\'b0\'fc\'c0\'a8\'c4\'da\'b5\'e3\'b7\'a8\par
+\'c0\'a9\'d5\'b9\'c1\'cb\'b8\'fc\'b6\'e0\'b9\'e3\'d2\'e5\'ca\'fd\'d6\'b5\'c7\'f3\'bd\'e2\'c6\'f7\'a3\'ac\'ca\'b9\'c6\'e4\'bf\'c9\'d2\'d4\'bd\'d3\'ca\'dc\'cf\'f2\'c1\'bf\'ba\'cd\'d2\'bb\'b0\'e3\'ca\'fd\'d7\'e9\'b1\'e4\'c1\'bf\par
+\'d2\'b5\'c4\'da\'c1\'ec\'cf\'c8\'b5\'c4\'b5\'dd\'b9\'e9\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'b8\'fc\'b9\'e3\'b7\'b6\'ce\'a7\'b5\'d8\'d6\'a7\'b3\'d6\'b7\'fb\'ba\'c5\'bc\'c6\'cb\'e3\'d6\'d0\'b5\'c4\'bc\'d9\'c9\'e8\par
+\'b0\'fc\'c0\'a8 .NET/Link\'a3\'ac\'cc\'e1\'b9\'a9\'d3\'eb Microsoft .NET Framework \'b5\'c4\'c8\'ab\'c3\'e6\'bc\'af\'b3\'c9\par
+DICOM\'a1\'a2PNG\'a1\'a2SVG \'ba\'cd\'cf\'a1\'ca\'e8\'be\'d8\'d5\'f3\'b8\'f1\'ca\'bd\'b5\'c4\'c1\'e9\'bb\'ee\'b5\'c4\'b5\'bc\'c8\'eb\'b5\'bc\'b3\'f6\'b9\'a6\'c4\'dc\par
+64 \'ce\'bb\'d3\'b2\'bc\'fe\'ba\'cd\'b2\'d9\'d7\'f7\'cf\'b5\'cd\'b3\'b5\'c4\'d3\'c5\'bb\'af\'b0\'e6\'b1\'be\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'bf\'ec\'cb\'d9\'c8\'eb\'c3\'c5\'bb\'a5\'b6\'af\'bd\'cc\'b3\'cc[1] \par
+Mathematica4.2 2002\par
+\par
+\'d3\'eb J/Link 2.0 \'ba\'cd\'c4\'da\'d6\'c3 Java Runtime Engine \'b5\'c4\'cd\'b8\'c3\'f7\'b5\'c4 Java \'bc\'af\'b3\'c9\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'cf\'df\'d0\'d4\'b9\'e6\'bb\'ae\'ba\'cd\'d7\'ee\'d3\'c5\'bb\'af\'bc\'bc\'ca\'f5\par
+\'cc\'e1\'b8\'df\'c1\'cb\'d0\'ed\'b6\'e0\'ca\'fd\'d6\'b5\'ba\'af\'ca\'fd\'b5\'c4\'cb\'d9\'b6\'c8\'ba\'cd\'c2\'b3\'b0\'f4\'d0\'d4\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'bc\'f2\'bb\'af\'c6\'f7\par
+\'d4\'f6\'c7\'bf\'cd\'b3\'bc\'c6\'b9\'a6\'c4\'dc\'a3\'ac\'b0\'fc\'c0\'a8\'d0\'c2\'b5\'c4 ANOVA \'b3\'cc\'d0\'f2\'b0\'fc\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'c5\'e4\'cc\'d7 Combinatorica \'b3\'cc\'d0\'f2\'b0\'fc\'a3\'ac\'d3\'c3\'d3\'da\'d7\'e9\'ba\'cf\'d1\'a7\'ba\'cd\'cd\'bc\'c2\'db\par
+\'d3\'c3\'d3\'da\'bc\'bc\'ca\'f5\'d0\'cd\'b3\'f6\'b0\'e6\'b5\'c4\'c5\'e4\'cc\'d7 AuthorTools \'b3\'cc\'d0\'f2\'b0\'fc\par
+\'d3\'c3\'d3\'da\'d1\'dd\'bd\'b2\'b5\'c4\'bb\'c3\'b5\'c6\'c6\'ac\'d1\'dd\'ca\'be\'bb\'b7\'be\'b3\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'b5\'bc\'c8\'eb\'ba\'cd\'b5\'bc\'b3\'f6\'b8\'f1\'ca\'bd\'a3\'ac\'b0\'fc\'c0\'a8 FITS\'ba\'cd STDS\par
+XML \'c0\'a9\'d5\'b9\'d4\'ca\'d0\'ed Mathematica \'b1\'ca\'bc\'c7\'b1\'be\'ba\'cd\'b1\'ed\'b4\'ef\'ca\'bd\'b1\'a3\'b4\'e6\'b3\'c9 XML \'b8\'f1\'ca\'bd\par
+\'c8\'ab\'d0\'c2\'b5\'c4\'c5\'e4\'cc\'d7 XML \'b9\'a4\'be\'df\'b3\'cc\'d0\'f2\'b0\'fc\'a3\'ac\'d2\'d4\'ca\'b5\'cf\'d6\'b7\'fb\'ba\'c5\'ca\'bd XML \'b2\'d9\'d7\'f7\par
+\'d6\'a7\'b3\'d6 XHTML \'b5\'bc\'b3\'f6\'a3\'ac\'b0\'fc\'c0\'a8\'d1\'f9\'ca\'bd\'b1\'ed\par
+\'c0\'a9\'d5\'b9\'b5\'c4 MathML 2.0 \'d6\'a7\'b3\'d6[1] \par
+Mathematica4.1 2000\par
+\par
+\'d2\'fd\'c8\'eb Macintosh OS X \'b0\'e6\'b1\'be\'a3\'a82001 \'c4\'ea 4.1.5 \'b0\'e6\'b1\'be\'a3\'a9\par
+\'b4\'f3\'b7\'f9\'b6\'c8\'d4\'f6\'c7\'bf\'b7\'fb\'ba\'c5\'ca\'bd\'ce\'a2\'bb\'fd\'b7\'d6\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'d4\'f6\'c7\'bf Mathematica \'c4\'a3\'ca\'bd\'c6\'a5\'c5\'e4\'c6\'f7\'ba\'cd\'b1\'e0\'d2\'eb\'c6\'f7\'a3\'ac\'cc\'e1\'b8\'df\'cb\'d9\'b6\'c8\'b2\'a2\'c7\'d2\'d7\'ee\'d0\'a1\'bb\'af\'c4\'da\'b4\'e6\'cf\'fb\'ba\'c4\par
+\'cc\'e1\'b9\'a9\'c1\'cb\'d0\'c2\'b5\'c4\'b1\'ea\'d7\'bc\'b3\'cc\'d0\'f2\'b0\'fc\'a3\'ac\'d2\'d4\'ca\'b5\'cf\'d6\'d4\'da\'d3\'c9\'b2\'bb\'b5\'c8\'ca\'bd\'b6\'a8\'d2\'e5\'b5\'c4\'b7\'b6\'ce\'a7\'c4\'da\'ba\'cd\'b7\'d6\'b6\'ce\'ba\'af\'ca\'fd\'c9\'cf\'b5\'c4\'bb\'fd\'b7\'d6\'d4\'cb\'cb\'e3\par
+\'cd\'b3\'bc\'c6\'ba\'af\'ca\'fd\'b5\'c4\'bf\'ec\'cb\'d9\'cb\'d9\'b6\'c8\'cc\'e1\'c9\'fd\par
+\'cf\'df\'d0\'d4\'b7\'bd\'b3\'cc\'d7\'e9\'ba\'cd\'be\'d8\'d5\'f3\'b5\'c4\'cf\'e0\'bb\'a5\'d7\'aa\'bb\'bb\par
+\'d3\'eb J/Link 1.1 \'b5\'c4 Java \'bc\'af\'b3\'c9\par
+\'b8\'c4\'bd\'f8\'cd\'f8\'d2\'b3\'c9\'cf MathML \'b5\'c4\'bc\'af\'b3\'c9\'bc\'bc\'ca\'f5\par
+\'d6\'a7\'b3\'d6\'b1\'a3\'b4\'e6\'b3\'c9 IBM techexplorer \'b8\'f1\'ca\'bd\par
+\'b6\'d4\'d3\'da Excel \'ce\'c4\'bc\'fe\'a1\'a2\'b1\'ed\'b8\'f1\'ca\'fd\'be\'dd\'ba\'cd\'d1\'b9\'cb\'f5 BMP\'a1\'a2DXF \'d3\'eb STL\'a3\'ac\'d4\'cb\'d0\'d0\'cb\'d9\'b6\'c8\'b8\'fc\'bf\'ec\'b5\'c4\'d0\'c2\'b0\'e6\'b5\'bc\'c8\'eb\'b5\'bc\'b3\'f6\'b9\'fd\'c2\'cb\'c6\'f7\par
+\'d6\'a7\'b3\'d6 Linux \'ba\'cd Unix \'c6\'bd\'cc\'a8\'c9\'cf\'c8\'fd\'ce\'ac\'cd\'bc\'d0\'ce\'b5\'c4\'ca\'b5\'ca\'b1\'b2\'d9\'d7\'f7\par
+X \'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4\'c9\'f9\'d2\'f4\'d6\'a7\'b3\'d6\par
+\'cc\'e1\'b9\'a9\'c1\'cb\'bb\'e6\'d6\'c6\'d3\'c9\'b2\'bb\'b5\'c8\'ca\'bd\'b6\'a8\'d2\'e5\'b5\'c4\'cd\'bc\'d0\'ce\'b5\'c4\'c0\'fd\'b3\'cc\par
+\'d6\'a7\'b3\'d6 PowerPC Linux \'ba\'cd AlphaLinux\par
+\'c0\'eb\'c9\'a2\'c8\'fd\'bd\'c7\'ba\'af\'ca\'fd\'b3\'cc\'d0\'f2\'b0\'fc\par
+\'d4\'f6\'c7\'bf X \'c7\'b0\'b6\'cb\'b5\'c4\'ca\'d3\'be\'f5\'d0\'a7\'b9\'fb\'ba\'cd\'d2\'d7\'d3\'c3\'d0\'d4[1] \par
+Mathematica4.0 1999\par
+\par
+\'b4\'f3\'b7\'f9\'cc\'e1\'b8\'df\'ca\'fd\'d6\'b5\'bc\'c6\'cb\'e3\'b5\'c4\'cb\'d9\'b6\'c8\'ba\'cd\'d0\'a7\'c2\'ca\par
+\'b3\'f6\'b0\'e6\'b8\'f7\'d6\'d6\'b8\'f1\'ca\'bd\'b5\'c4\'ce\'c4\'b5\'b5\par
+\'b1\'ca\'bc\'c7\'b1\'be\'bd\'e7\'c3\'e6\'c9\'cf\'b5\'c4\'c6\'b4\'d0\'b4\'bc\'ec\'b2\'e9\'ba\'cd\'c1\'ac\'d7\'d6\'b7\'fb\par
+\'d6\'b1\'bd\'d3\'b5\'bc\'c8\'eb\'ba\'cd\'b5\'bc\'b3\'f620\'d3\'e0\'d6\'d6\'b1\'ea\'d7\'bc\'ca\'fd\'be\'dd\'a1\'a2\'cd\'bc\'d0\'ce\'ba\'cd\'c9\'f9\'d2\'f4\'ce\'c4\'bc\'fe\'b8\'f1\'ca\'bd\par
+\'b6\'d4\'ca\'fd\'be\'dd\'b7\'d6\'ce\'f6\'b5\'c4\'b7\'b6\'ce\'a7\'c0\'a9\'d5\'b9\'ba\'cd\'b9\'a6\'c4\'dc\'b8\'c4\'bd\'f8\'a3\'ac\'b0\'fc\'c0\'a8\'cf\'e0\'b9\'d8\'a1\'a2\'be\'ed\'bb\'fd\'ba\'cd\'d2\'bb\'b8\'f6\'d0\'c2\'b5\'c4\'b8\'b5\'c0\'ef\'d2\'b6\'b1\'e4\'bb\'bb\'cb\'e3\'b7\'a8\par
+\'d6\'a7\'b3\'d6\'b4\'a6\'c0\'ed\'d4\'da\'cc\'d8\'b6\'a8\'b4\'fa\'ca\'fd\'d3\'f2\'c9\'cf\'b5\'c4\'bc\'c6\'cb\'e3\par
+\'d4\'da\'cb\'f9\'d3\'d0\'c6\'bd\'cc\'a8\'c9\'cf\'b6\'bc\'d6\'a7\'b3\'d6\'cd\'f8\'c2\'e7\'d0\'ed\'bf\'c9\'d6\'a4\'b9\'dc\'c0\'ed\'b9\'a6\'c4\'dc\par
+\'b6\'d4\'d0\'ed\'b6\'e0\'c4\'da\'d6\'c3 Mathematica \'ba\'af\'ca\'fd\'b5\'c4\'d4\'f6\'c7\'bf[1] \par
+Mathematica3.0 1996\par
+\par
+\'bd\'bb\'bb\'a5\'ca\'bd\'ca\'fd\'d1\'a7\'c5\'c5\'b0\'e6\'cf\'b5\'cd\'b3\par
+\'b4\'fa\'ca\'fd\'ca\'fd\par
+Mathematica \'b1\'e0\'d2\'eb\'c6\'f7\'c0\'a9\'d5\'b9\'b3\'c9\'bf\'c9\'d2\'d4\'b2\'d9\'d7\'f7\'d3\'c9\'bb\'fa\'c6\'f7\'be\'ab\'b6\'c8\'ca\'fd\'d7\'e9\'b3\'c9\'b5\'c4\'ca\'fd\'d7\'e9\par
+\'d6\'a7\'b3\'d6\'be\'df\'d3\'d0 Levenberg-Marquardt \'bc\'bc\'ca\'f5\'b5\'c4\'b7\'c7\'cf\'df\'d0\'d4\'d7\'ee\'d0\'a1\'b6\'fe\'b3\'cb\'b7\'a8\par
+\'b8\'c4\'bd\'f8\'b5\'c4\'b2\'e5\'d6\'b5\'bc\'bc\'ca\'f5\'a3\'a8\'b6\'d4\'d3\'da\'c7\'f3\'ca\'fd\'d6\'b5\'b3\'a3\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'b5\'c4\'bd\'e1\'b9\'fb\'ba\'dc\'d6\'d8\'d2\'aa\'a3\'a9\par
+\'c7\'f8\'bc\'e4\'cb\'e3\'ca\'f5\par
+\'bb\'af\'bc\'f2\'ba\'cd\'d7\'aa\'bb\'bb\'b1\'ed\'b4\'ef\'ca\'bd\'b5\'c4\'d0\'c2\'ba\'af\'ca\'fd\par
+\'d7\'ee\'d3\'c5\'bb\'af Groebner \'bb\'f9\'ba\'af\'ca\'fd\par
+\'d0\'ed\'b6\'e0\'d0\'c2\'b5\'c4\'cc\'d8\'ca\'e2\'ba\'af\'ca\'fd\par
+\'bb\'f9\'d3\'da\'d2\'ec\'b3\'a3\'b5\'c4\'b1\'e0\'b3\'cc\'c1\'f7\'b3\'cc\'bf\'d8\'d6\'c6[1] \par
+Mathematica2.2 1993\par
+\par
+\'be\'df\'d3\'d0\'d0\'c2\'b1\'ca\'bc\'c7\'b1\'be\'c3\'fc\'c1\'ee\'b5\'c4 Windows \'c7\'b0\'b6\'cb\par
+Macintosh \'b5\'c4\'b6\'c0\'c1\'a2\'c7\'b0\'b6\'cb\par
+X \'c7\'b0\'b6\'cb\par
+Windows \'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4 MathLink\par
+Linux \'b0\'e6\'b1\'be\par
+\'d4\'f6\'bc\'d3 Isocontour\'a3\'a8\'b5\'c8\'b8\'df\'cf\'df\'a3\'a9\'bb\'e6\'cd\'bc\'c0\'fd\'b3\'cc\par
+\'d4\'f6\'bc\'d3\'d2\'bb\'bd\'d7\'c6\'ab\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'b5\'c4\'b7\'fb\'ba\'c5\'ca\'bd\'bd\'e2\'b5\'c4\'b3\'cc\'d0\'f2\'b0\'fc\par
+\'d4\'f6\'bc\'d3\'c1\'cb\'d4\'da\'c0\'fd\'c8\'e7\'c8\'fd\'ce\'ac\'b5\'c8\'b8\'df\'cf\'df\'bb\'e6\'cd\'bc\'a1\'a2\'b1\'e4\'b7\'d6\'ce\'a2\'bb\'fd\'b7\'d6\'d2\'d4\'bc\'b0\'d2\'f4\'c0\'d6\'b5\'c8\'c1\'ec\'d3\'f2\'b5\'c4 10 \'b8\'f6\'c6\'e4\'cb\'fb\'b3\'cc\'d0\'f2\'b0\'fc\par
+\'c8\'ab\'d0\'c2\'b0\'ef\'d6\'fa\'b9\'a6\'c4\'dc\'a3\'ac\'b0\'fc\'c0\'a8 X Windows \'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4\'d4\'da\'cf\'df\'ca\'d6\'b2\'e1\'ba\'cd Macintosh \'d2\'d4\'bc\'b0 NeXT \'c6\'bd\'cc\'a8\'c9\'cf\'b5\'c4\'ba\'af\'ca\'fd\'e4\'af\'c0\'c0\'c6\'f7\par
+\'cf\'a1\'ca\'e8\'cf\'df\'d0\'d4\'b7\'bd\'b3\'cc\'d7\'e9\'b5\'c4\'bf\'ec\'cb\'d9\'ca\'fd\'d6\'b5\'bd\'e2\par
+\'c0\'a9\'d5\'b9\'c1\'cb\'b7\'fb\'ba\'c5\'ca\'bd\'b6\'a8\'bb\'fd\'b7\'d6\'b9\'a6\'c4\'dc\'a3\'ac\'ca\'b9\'c6\'e4\'b0\'fc\'c0\'a8\'bc\'ec\'d1\'e9\'b7\'c7\'bf\'c9\'bb\'fd\'c6\'e6\'b5\'e3\'a3\'ac\'b2\'a2\'c7\'d2\'d2\'b2\'c4\'dc\'b9\'bb\'b4\'a6\'c0\'ed\'bb\'fd\'b7\'d6\'b7\'b6\'ce\'a7\'c4\'da\'b5\'c4\'b7\'d6\'d6\'a7[1] \par
+Mathematica2.1 1992\par
+\par
+\'b5\'c8\'b8\'df\'cf\'df\'bb\'e6\'cd\'bc\'cb\'e3\'b7\'a8\'b5\'c4\'c9\'fd\'bc\'b6\par
+Unix MathLink \'d4\'f6\'c7\'bf\'b9\'a6\'c4\'dc\'ba\'cd\'ce\'c4\'b5\'b5\par
+Macintosh \'c6\'bd\'cc\'a8\'b5\'c4 MathLink\par
+Macintosh \'b0\'e6\'b1\'be\'b5\'c4 QuickTime \'b6\'af\'bb\'ad\par
+\'d6\'a7\'b3\'d6 Windows 3.1\par
+Unix \'ba\'cd PC \'bc\'f2\'b0\'e6\'b0\'b2\'d7\'b0\'b3\'cc\'d0\'f2\'a3\'ac\'d2\'d4\'bc\'f5\'c9\'d9\'c4\'da\'b4\'e6\'ca\'b9\'d3\'c3\'c1\'bf\par
+\'d0\'c2\'d4\'f6\'bc\'d3\'c1\'cb\'d4\'da\'d6\'ee\'c8\'e7\'b7\'c7\'cf\'df\'d0\'d4\'c4\'e2\'ba\'cf\'a1\'a2\'b6\'fe\'bd\'f8\'d6\'c6\'ce\'c4\'bc\'fe\'b2\'d9\'d7\'f7\'a1\'a2\'b5\'d2\'c0\'ad\'bf\'cb \f2\lang1032\'e4\f0\lang1033  \'ba\'af\'ca\'fd\'ba\'cd\'c9\'f9\'d2\'f4\'ba\'cf\'b3\'c9\'b5\'c8\'c1\'ec\'d3\'f2\'b5\'c4\'b3\'cc\'d0\'f2\'b0\'fc[1] \par
+Mathematica2.0 1991\par
+\par
+\'ca\'fd\'d6\'b5\'b3\'a3\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'ca\'fd\'d6\'b5\'b1\'e0\'d2\'eb\'c6\'f7\par
+\'b8\'c4\'bd\'f8\'cf\'df\'d0\'d4\'b4\'fa\'ca\'fd\'b9\'a6\'c4\'dc\par
+Integrate \'b5\'c4 Risch \'cb\'e3\'b7\'a8\'ca\'b5\'cf\'d6\par
+\'b7\'fb\'ba\'c5\'ca\'bd\'b3\'a3\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'c6\'f7\par
+\'bc\'b6\'ca\'fd\'c0\'a9\'d5\'b9\'b5\'bd\'d0\'ed\'b6\'e0\'cc\'d8\'ca\'e2\'ba\'af\'ca\'fd\par
+\'d4\'f6\'bc\'d3 ParametricPlot3D\par
+\'b6\'d4\'cd\'bc\'d0\'ce\'b5\'c4\'d0\'ed\'b6\'e0\'c6\'e4\'cb\'fb\'d0\'de\'ca\'ce\'b9\'a6\'c4\'dc\par
+\'b8\'c4\'bd\'f8\'c1\'cb\'c8\'fd\'ce\'ac\'cd\'bc\'d0\'ce\'b5\'c4\'d2\'fe\'c3\'e6\'cf\'fb\'b3\'fd\'b9\'a6\'c4\'dc\par
+\'d0\'ed\'b6\'e0\'d7\'d6\'b7\'fb\'b4\'ae\'ba\'cd\'ce\'c4\'bc\'fe\'b2\'d9\'d7\'f7\par
+\'d3\'c3\'d3\'da\'bd\'f8\'b3\'cc\'bc\'e4\'ba\'cd\'bb\'f9\'d3\'da\'cd\'f8\'c2\'e7\'cd\'a8\'d1\'b6\'b5\'c4 MathLink \'d0\'ad\'d2\'e9\par
+\'d2\'f4\'c6\'b5\'d6\'a7\'b3\'d6\par
+\'d6\'a7\'b3\'d6\'b6\'e0\'b9\'fa\'d7\'d6\'b7\'fb\'bc\'af\par
+\'ce\'f3\'b2\'ee\'bc\'ec\'b2\'e2\'ba\'cd\'b5\'f7\'ca\'d4\par
+\'b1\'ca\'bc\'c7\'b1\'be\'c7\'b0\'b6\'cb[1] \par
+Mathematica1.2 1989\par
+\par
+Macintosh \'c7\'b0\'b6\'cb\par
+\'d6\'a7\'b3\'d6\'d4\'b6\'b3\'cc\'c4\'da\'ba\'cb\par
+\'b4\'f3\'b7\'f9\'b6\'c8\'d4\'f6\'c7\'bf\'b7\'fb\'ba\'c5\'ca\'bd\'bb\'fd\'b7\'d6\'b5\'c4\'b9\'a6\'c4\'dc\par
+\'c0\'fb\'d3\'c3 DSolve \'b5\'c4\'bb\'f9\'b1\'be\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'c7\'f3\'bd\'e2\'b9\'a6\'c4\'dc\par
+\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3\'b7\'b4\'ba\'af\'ca\'fd\'b5\'c4\'b3\'ac\'d4\'bd\'b7\'bd\'b3\'cc\'ba\'cd\'c6\'e4\'cb\'fb\'b7\'bd\'b3\'cc\'b5\'c4\'c7\'f3\'bd\'e2\par
+\'be\'ab\'c8\'b7\'b2\'e5\'d6\'b5\'b6\'e0\'cf\'ee\'ca\'bd\par
+\'d4\'f6\'bc\'d3\'c1\'cb LinearProgramming\'a1\'a2ConstrainedMax \'ba\'cd ConstrainedMin\par
+\'d4\'f6\'bc\'d3\'c1\'cb MatrixPower \'ba\'cd MatrixExp\par
+\'d4\'f6\'bc\'d3\'c1\'cb Groebner \'bb\'f9\par
+\'b6\'d4 Det\'a1\'a2Inverse \'ba\'cd LinearSolve \'cc\'ed\'bc\'d3\'c1\'cb Modulus \'d1\'a1\'cf\'ee\par
+\'d4\'f6\'bc\'d3\'c1\'cb Statistics \'ba\'cd Graphics \'b1\'ea\'d7\'bc\'b3\'cc\'d0\'f2\'b0\'fc\par
+\'d0\'ed\'b6\'e0\'d0\'c2\'b5\'c4\'cd\'bc\'d0\'ce\'d1\'a1\'cf\'ee\'ba\'cd\'b9\'a6\'c4\'dc\'a3\'ac\'b0\'fc\'c0\'a8\'c8\'fd\'ce\'ac\'cd\'bc\'d0\'ce\'b5\'c4\'d7\'f8\'b1\'ea\'d6\'e1\'ba\'cd\'b1\'ea\'c7\'a9\par
+\'b8\'fc\'d3\'d0\'d0\'a7\'b5\'c4\'b6\'e0\'b1\'e4\'c1\'bf\'b6\'e0\'cf\'ee\'ca\'bd\'d7\'ee\'b4\'f3\'b9\'ab\'d4\'bc\'ca\'fd\'ba\'cd\'d2\'f2\'ca\'bd\'b7\'d6\'bd\'e2[1] \par
+Mathematica1.0 1988\par
+\par
+Mathematica \'b5\'c4\'ca\'d7\'b4\'ce\'b7\'a2\'b2\'bc[1] \par
+8\'b2\'fa\'c6\'b7\'b9\'a6\'c4\'dc\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'b5\'c4\'b9\'a6\'c4\'dc\'b0\'fc\'c0\'a8\'a3\'ba\par
+1\'a1\'a2\'ca\'b9\'d3\'c3\'d2\'bb\'d0\'d0\'b4\'fa\'c2\'eb\'bf\'c9\'cf\'d4\'ca\'be\'b5\'c4\'cd\'bc\'d0\'ce\par
+2\'a1\'a2\'b8\'f7\'d6\'d6\'bb\'f9\'b1\'be\'ca\'fd\'d1\'a7\'ba\'af\'ca\'fd\'bf\'e2\par
+3\'a1\'a2\'b8\'f7\'d6\'d6\'cc\'d8\'ca\'e2\'ca\'f4\'d0\'d4\'ba\'af\'ca\'fd\'bf\'e2\par
+4\'a1\'a2\'be\'d8\'d5\'f3\'ba\'cd\'ca\'fd\'be\'dd\'b2\'d9\'d7\'dd\'b9\'a4\'be\'df\'a3\'ac\'b0\'fc\'c0\'a8\'b6\'d4\'cf\'a1\'ca\'e8\'be\'d8\'d5\'f3\'b5\'c4\'b4\'a6\'c0\'ed\par
+5\'a1\'a2\'d6\'a7\'b3\'d6\'b8\'b4\'ca\'fd\'a1\'a2\'c8\'ce\'d2\'e2\'be\'ab\'b6\'c8\'ca\'fd\'a1\'a2\'c7\'f8\'bc\'e4\'cb\'e3\'ca\'f5\'ba\'cd\'b7\'fb\'ba\'c5\'d4\'cb\'cb\'e3\par
+6\'a1\'a22\'ce\'ac\'ba\'cd3\'ce\'ac\'ca\'fd\'be\'dd\'d2\'d4\'bc\'b0\'ba\'af\'ca\'fd\'b5\'c4\'bf\'c9\'ca\'d3\'bb\'af\'ba\'cd\'b6\'af\'bb\'ad\'b9\'a4\'be\'df\par
+7\'a1\'a2\'c7\'f3\'bd\'e2\'b7\'bd\'b3\'cc\'d7\'e9\'a1\'a2\'b3\'a3\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'a1\'a2\'c6\'ab\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'a1\'a2\'ce\'a2\'b7\'d6\'b4\'fa\'ca\'fd\'b7\'bd\'b3\'cc\'a1\'a2\'ca\'b1\'d6\'cd\'ce\'a2\'b7\'d6\'b7\'bd\'b3\'cc\'a1\'a2\'b5\'dd\'cd\'c6\'b9\'d8\'cf\'b5\'ca\'bd\'b5\'c8\'b5\'c8\par
+8\'a1\'a2\'c0\'eb\'c9\'a2\'ba\'cd\'c1\'ac\'d0\'f8\'ce\'a2\'bb\'fd\'b7\'d6\'b5\'c4\'ca\'fd\'d6\'b5\'ba\'cd\'b7\'fb\'ba\'c5\'b9\'a4\'be\'df\par
+9\'a1\'a2\'b6\'e0\'b1\'e4\'c1\'bf\'cd\'b3\'bc\'c6\'b3\'cc\'d0\'f2\'bf\'e2\'a3\'ac\'b0\'fc\'c0\'a8\'d6\'a7\'b3\'d6100\'b6\'e0\'d6\'d6\'ca\'fd\'be\'dd\'b7\'d6\'b2\'bc\'b5\'c4\'ca\'fd\'be\'dd\'c4\'e2\'ba\'cf\'a1\'a2\'bc\'d9\'c9\'e8\'bc\'ec\'d1\'e9\'a1\'a2\'b8\'c5\'c2\'ca\'ba\'cd\'c6\'da\'cd\'fb\'b5\'c4\'d4\'cb\'cb\'e3\par
+10\'a1\'a2\'b6\'d4\'d4\'cb\'cb\'e3\'ba\'cd\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'cc\'ed\'bc\'d3\'d3\'c3\'bb\'a7\'bd\'e7\'c3\'e6\'b5\'c4\'b8\'f7\'d6\'d6\'b9\'a4\'be\'df\'b0\'fc\par
+11\'a1\'a2\'d4\'bc\'ca\'f8\'ba\'cd\'b7\'c7\'d4\'bc\'ca\'f8\'d2\'d4\'bc\'b0\'be\'d6\'b2\'bf\'ba\'cd\'c8\'ab\'be\'d6\'b5\'c4\'d7\'ee\'d3\'c5\'bb\'af\'bc\'bc\'ca\'f5\'d6\'a7\'b3\'d6\par
+12\'a1\'a2\'b3\'cc\'d0\'f2\'d3\'ef\'d1\'d4\'d6\'a7\'b3\'d6\'a3\'ba\'b9\'fd\'b3\'cc\'ca\'bd\'b1\'e0\'b3\'cc\'d3\'ef\'d1\'d4\'a1\'a2\'ba\'af\'ca\'fd\'ca\'bd\'b1\'e0\'b3\'cc\'d3\'ef\'d1\'d4\'ba\'cd\'c3\'e6\'cf\'f2\'b6\'d4\'cf\'f3\'b5\'c4\'b1\'e0\'b3\'cc\'d3\'ef\'d1\'d4\par
+13\'a1\'a2\'cd\'bc\'cf\'f1\'b4\'a6\'c0\'ed\'b9\'a4\'be\'df \'a3\'ac\'b0\'fc\'c0\'a8\'cd\'bc\'cf\'f1\'ca\'b6\'b1\'f0\par
+14\'a1\'a2\'cc\'e1\'b9\'a9\'d3\'c3\'d3\'da\'cd\'bc\'c2\'db\'d6\'d0\'cd\'bc\'b5\'c4\'b7\'d6\'ce\'f6\'ba\'cd\'bf\'c9\'ca\'d3\'bb\'af\'b5\'c4\'b9\'a4\'be\'df\par
+15\'a1\'a2\'b7\'d6\'ce\'f6\'d7\'e9\'ba\'cf\'ce\'ca\'cc\'e2\'b5\'c4\'b9\'a4\'be\'df\par
+16\'a1\'a2\'d3\'c3\'d3\'da\'ce\'c4\'b1\'be\'cd\'da\'be\'f2\'b5\'c4\'b9\'a4\'be\'df\par
+17\'a1\'a2\'ca\'fd\'be\'dd\'cd\'da\'be\'f2\'b5\'c4\'b9\'a4\'be\'df\'a3\'ac\'b1\'c8\'c8\'e7\'be\'db\'c0\'e0\'b7\'d6\'ce\'f6\'a1\'a2\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'c6\'eb\'ba\'cd\'c4\'a3\'ca\'bd\'c6\'a5\'c5\'e4\par
+18\'a1\'a2\'ca\'fd\'c2\'db\'ba\'af\'ca\'fd\'bf\'e2\par
+19\'a1\'a2\'bd\'f0\'c8\'da\'d4\'cb\'cb\'e3\'b5\'c4\'b9\'a4\'be\'df\'a3\'ac\'b0\'fc\'c0\'a8\'c6\'da\'c8\'a8\'a1\'a2\'d5\'ae\'c8\'af\'a1\'a2\'c4\'ea\'bd\'f0\'a1\'a2\'c5\'c9\'c9\'fa\'b9\'a4\'be\'df\'b5\'c8\'b5\'c4\'bc\'c6\'cb\'e3\par
+20\'a1\'a2\'c8\'ba\'c2\'db\'ba\'af\'ca\'fd\par
+21\'a1\'a2\'bc\'bc\'ca\'f5\'ce\'c4\'b1\'be\'b4\'a6\'c0\'ed\'a3\'ac\'b0\'fc\'c0\'a8\'b9\'ab\'ca\'bd\'b1\'e0\'bc\'ad\'c6\'f7\'ba\'cd\'d7\'d4\'b6\'af\'b1\'a8\'b8\'e6\'c9\'fa\'b3\'c9\par
+22\'a1\'a2\'d3\'c3\'d3\'da\'c9\'f9\'d2\'f4\'a1\'a2\'cd\'bc\'cf\'f1\'ba\'cd\'ca\'fd\'be\'dd\'b5\'c4\'d0\'a1\'b2\'a8\'b7\'d6\'ce\'f6\'b3\'cc\'d0\'f2\'bf\'e2\par
+23\'a1\'a2\'bf\'d8\'d6\'c6\'cf\'b5\'cd\'b3\'b3\'cc\'d0\'f2\'bf\'e2\par
+24\'a1\'a2\'c1\'ac\'d0\'f8\'ba\'cd\'c0\'eb\'c9\'a2\'b5\'c4\'bb\'fd\'b7\'d6\'b1\'e4\'bb\'bb\par
+25\'a1\'a2\'b5\'bc\'c8\'eb\'ba\'cd\'b5\'bc\'b3\'f6\'ca\'fd\'be\'dd\'a1\'a2\'cd\'bc\'cf\'f1\'a1\'a2\'ca\'d3\'c6\'b5\'a1\'a2GIS\'a1\'a2CAD\'b5\'c8\'b8\'f7\'d6\'d6\'ce\'c4\'bc\'fe\'b8\'f1\'ca\'bd\'a3\'ac\'b2\'a2\'d6\'a7\'b3\'d6\'b6\'d4\'c9\'fa\'ce\'ef\'d2\'bd\'d1\'a7\'c0\'e0\'ca\'fd\'be\'dd\'b5\'c4\'ca\'e4\'c8\'eb\'ba\'cd\'ca\'e4\'b3\'f6\par
+26\'a1\'a2\'c1\'b4\'bd\'d3Wolfram Alpha\'b5\'c4\'b4\'f3\'c1\'bf\'ca\'fd\'d1\'a7\'a1\'a2\'bf\'c6\'d1\'a7\'a1\'a2\'c9\'e7\'bb\'e1\'be\'ad\'bc\'c3\'d1\'a7\'c0\'e0\'b5\'c4\'ca\'fd\'be\'dd\'bc\'af\'ba\'cf\par
+27\'a1\'a2\'b2\'e9\'bf\'b4\'b2\'a2\'c7\'d2\'d6\'d8\'d0\'c2\'ca\'b9\'d3\'c3\'c7\'b0\'c3\'e6\'b5\'c4\'ca\'e4\'c8\'eb\'ba\'cd\'ca\'e4\'b3\'f6\'a3\'a8\'b0\'fc\'c0\'a8\'cd\'bc\'cf\'f1\'ba\'cd\'ce\'c4\'b1\'be\'bc\'c7\'ba\'c5\'a3\'a9\'b5\'c4\'b1\'ca\'bc\'c7\'b1\'be\'bd\'e7\'c3\'e6\par
+28\'a1\'a2\'ba\'cd\'bb\'f9\'d3\'daDLL\'a1\'a2SQL\'a1\'a2Java\'a1\'a2.NET\'a1\'a2C++\'a1\'a2FORTRAN\'a1\'a2CUDA\'a1\'a2OpenCL\'d2\'d4\'bc\'b0http\'b5\'c4\'cf\'b5\'cd\'b3\'cf\'e0\'c1\'b4\'bd\'d3\'b5\'c4\'b9\'a4\'be\'df\par
+29\'a1\'a2\'b1\'e0\'d0\'b4\'b2\'a2\'d0\'d0\'b3\'cc\'d0\'f2\'b5\'c4\'b9\'a4\'be\'df\par
+30\'a1\'a2\'b5\'b1\'d3\'eb\'bb\'a5\'c1\'aa\'cd\'f8\'c1\'ac\'bd\'d3\'ca\'b1\'a3\'ac\'d4\'da\'b1\'ca\'bc\'c7\'b1\'be\'d6\'d0\'bf\'c9\'cd\'ac\'ca\'b1\'ca\'b9\'d3\'c3\ldblquote\'d7\'d4\'d3\'c9\'b8\'f1\'ca\'bd\'d3\'ef\'d1\'d4\'ca\'e4\'c8\'eb\rdblquote\'a3\'a8\'d2\'bb\'b8\'f6\'d7\'d4\'c8\'bb\'d3\'ef\'d1\'d4\'d0\'cd\'b5\'c4\'d3\'c3\'bb\'a7\'bd\'e7\'c3\'e6)\'ba\'cd Mathematica \'d3\'ef\'d1\'d4[2] \par
+9\'d3\'a6\'d3\'c3\'b5\'c4\'c1\'b4\'bd\'d3\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'cd\'a8\'b9\'fd\'c3\'fb\'ce\'aaMathLink\'b5\'c4\'d0\'ad\'d2\'e9\'d3\'eb\'c6\'e4\'cb\'fc\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'c1\'b4\'bd\'d3\'a1\'a3\'cd\'a8\'b9\'fd\'b8\'c3\'d0\'ad\'d2\'e9\'a3\'acMathematica\'ca\'b5\'cf\'d6\'c4\'da\'ba\'cb\'d3\'eb\'c7\'b0\'b6\'cb\'b5\'c4\'cd\'a8\'d1\'b6\'a3\'ac\'b2\'a2\'c7\'d2\'d2\'b2\'cc\'e1\'b9\'a9\'c1\'cb\'c4\'da\'ba\'cb\'ba\'cd\'c6\'e4\'cb\'fc\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'ae\'bc\'e4\'b5\'c4\'d2\'bb\'b8\'f6\'cd\'a8\'d3\'c3\'bd\'d3\'bf\'da\'a1\'a3\par
+Mathematica\'b2\'bb\'b5\'ab\'b1\'be\'c9\'ed\'be\'df\'d3\'d0\'b7\'e1\'b8\'bb\'b5\'c4\'b9\'a6\'c4\'dc\'a3\'ac\'b6\'f8\'c7\'d2\'cb\'fc\'d2\'b2\'cc\'e1\'b9\'a9\'c1\'cb\'b4\'f3\'c1\'bf\'bd\'d3\'bf\'da\'d3\'c3\'d2\'d4\'b7\'c3\'ce\'ca\'c6\'e4\'cb\'fc\'c8\'ed\'bc\'fe\'a3\'ac\'b4\'d3\'b6\'f8\'bf\'c9\'d2\'d4\'b7\'bd\'b1\'e3\'b5\'d8\'b5\'f7\'d3\'c3\'c4\'c7\'d0\'a9\'c6\'e4\'cb\'fc\'c8\'ed\'bc\'fe\'be\'df\'d3\'d0\'b5\'abMathematica\'d4\'dd\'ca\'b1\'b2\'bb\'be\'df\'b1\'b8\'b5\'c4\'b9\'a6\'c4\'dc\'a1\'a3\'d5\'e2\'d1\'f9\'d7\'f6\'bf\'c9\'d2\'d4\'bd\'f8\'d2\'bb\'b2\'bd\'d4\'f6\'c7\'bfMathematica\'b5\'c4\'ca\'ca\'d3\'c3\'d0\'d4\'a1\'a3\par
+Wolfram Research\'b7\'a2\'b2\'bc\'c1\'cb\'d2\'bb\'b8\'f6\'c3\'e2\'b7\'d1\'b5\'c4\'bf\'aa\'b7\'a2\'b9\'a4\'be\'df\'b0\'fc\'a3\'ac\'b8\'c3\'b9\'a4\'be\'df\'b0\'fc\'d4\'ca\'d0\'edC programming language\'b1\'e0\'d0\'b4\'b5\'c4\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'cd\'a8\'b9\'fdMathLink\'c1\'b4\'bd\'d3\'b5\'bdMathematica\'c4\'da\'ba\'cb\'a1\'a3\par
+\'ca\'b9\'d3\'c3.NET/Link\'a3\'ac\'a3\'ac\'c8\'ce\'ba\'ce\'d2\'bb\'b8\'f6.NET\'b3\'cc\'d0\'f2\'b6\'bc\'bf\'c9\'d2\'d4\'b5\'f7\'d3\'c3Mathematica\'d6\'b4\'d0\'d0\'bc\'c6\'cb\'e3\'b2\'d9\'d7\'f7\'a3\'bb\'cf\'e0\'d3\'a6\'b5\'d8\'a3\'acMathematica\'b3\'cc\'d0\'f2\'d2\'b2\'bf\'c9\'d2\'d4\'bc\'d3\'d4\'d8.NETclasses\'a1\'a2\'b2\'d9\'d7\'dd.NET\'b6\'d4\'cf\'f3\'b2\'a2\'c7\'d2\'d6\'b4\'d0\'d0\'b7\'bd\'b7\'a8\'b5\'f7\'d3\'c3\'a1\'a3\'d5\'e2\'d1\'f9\'ce\'d2\'c3\'c7\'be\'cd\'bf\'c9\'d2\'d4\'b4\'d3Mathematica\'c4\'da\'b2\'bf\'b9\'b9\'bd\'a8.NET\'cd\'bc\'d0\'ce\'d3\'c3\'bb\'a7\'bd\'e7\'c3\'e6\'a1\'a3\'c0\'e0\'cb\'c6\'b5\'d8\'a3\'acMathematica\'d2\'b2\'d3\'d0J/Link\'a1\'a3\'b9\'cb\'c3\'fb\'cb\'bc\'d2\'e5\'a3\'ac\'cb\'fc\'bf\'c9\'d2\'d4\'d3\'c3\'d3\'daMathematica\'d3\'ebJava\'b3\'cc\'d0\'f2\'d6\'ae\'bc\'e4\'b5\'c4\'bd\'bb\'bb\'a5\'a1\'a3\par
+\'d3\'ebSQL\'ca\'fd\'be\'dd\'bf\'e2\'d6\'ae\'bc\'e4\'b5\'c4\'cd\'a8\'d1\'b6\'ca\'c7\'cd\'a8\'b9\'fd\'c4\'da\'d6\'c3\'b5\'c4JDBC\'d6\'a7\'b3\'d6\'ca\'b5\'cf\'d6\'b5\'c4\'a1\'a3Mathematica\'d2\'b2\'bf\'c9\'d2\'d4\'b4\'d3\'d2\'bb\'b8\'f6WSDL\'c3\'e8\'ca\'f6\'d6\'d0\'b0\'b2\'d7\'b0\'cd\'f8\'d2\'b3\'b7\'fe\'ce\'f1\'a1\'a3\par
+\'c6\'e4\'cb\'fc\'d3\'ebMathematica\'cf\'e0\'c1\'b4\'bd\'d3\'b5\'c4\'d3\'ef\'d1\'d4\'b0\'fc\'c0\'a8Haskell\'a1\'a2AppleScript\'a1\'a2PLT Scheme\'a1\'a2Visual Basic\'a1\'a2Python\'ba\'cdClojure\'a1\'a3\par
+\'d4\'daMathematica\'ba\'cdOpenOffice.org Calc\'d2\'d4\'bc\'b0Microsoft Excel\'d6\'ae\'bc\'e4\'d3\'d0\'cb\'ab\'cf\'f2\'b5\'c4\'c1\'b4\'bd\'d3\'a1\'a3\par
+Mathematica\'d2\'b2\'cc\'e1\'b9\'a9\'c1\'cb\'d3\'eb\'d0\'ed\'b6\'e0\'d7\'a8\'c3\'c5\'b5\'c4\'ca\'fd\'d1\'a7\'c8\'ed\'bc\'fe\'b0\'fc\'d6\'ae\'bc\'e4\'b5\'c4\'c1\'b4\'bd\'d3\'a3\'ac\'b0\'fc\'c0\'a8MATLAB\'a1\'a2R\'a1\'a2Sage\'a1\'a2SINGULAR\'a1\'a2MathModelica\'ba\'cdOrigin\par
+Mathematica\'d6\'d0\'b5\'c4\'ca\'fd\'d1\'a7\'b9\'ab\'ca\'bd\'d2\'b2\'bf\'c9\'d2\'d4\'d3\'eb\'c6\'e4\'cb\'fc\'bc\'c6\'cb\'e3\'bb\'f2\'d5\'df\'c5\'c5\'b0\'e6\'c8\'ed\'bc\'fe\'a3\'a8\'b1\'c8\'c8\'e7MathML\'a3\'a9\'b5\'c4\'b9\'ab\'ca\'bd\'bd\'f8\'d0\'d0\'cf\'e0\'bb\'a5\'d7\'aa\'bb\'bb\'a1\'a3\par
+Mathematica\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd\'b6\'e0\'d6\'d6\'b7\'bd\'ca\'bd\'b2\'b6\'bb\'f1\'ca\'b5\'ca\'b1\'ca\'fd\'be\'dd\'a3\'ac\'b1\'c8\'c8\'e7\'d3\'ebLabVIEW\'b5\'c4\'c1\'b4\'bd\'d3\'a3\'ac\'bd\'f0\'c8\'da\'ca\'fd\'be\'ddfeeds\'a3\'ac\'bb\'f2\'d5\'df\'d6\'b1\'bd\'d3\'cd\'a8\'b9\'fdGPIB\'b4\'d3\'d3\'b2\'bc\'fe\'c9\'e8\'b1\'b8\'a3\'a8IEEE 488\'a3\'a9\'a1\'a2USB\'d2\'d4\'bc\'b0\'b4\'ae\'d0\'d0\'bd\'d3\'bf\'da\'bb\'f1\'c8\'a1\'a1\'a3\par
+\'c6\'e4\'cb\'fb\'bf\'c9\'d3\'c3\'bd\'e7\'c3\'e6\'d3\'d0JMath,\'cb\'fc\'bb\'f9\'d3\'daGNU readline\'ba\'cdMASH\'a3\'ac\'b2\'a2\'c0\'fb\'d3\'c3UNIX\'c3\'fc\'c1\'ee\'d0\'d0\'d4\'cb\'d0\'d0\'c4\'da\'d6\'c3\'b5\'c4Mathematica\'b3\'cc\'d0\'f2\'a3\'a8\'c4\'da\'ba\'ac\'b2\'ce\'ca\'fd\'a3\'a9\'a1\'a3\par
+\'d6\'a7\'b3\'d6\'d3\'ef\'d1\'d4\par
+\par
+\'d3\'ef\'d1\'d4\'a3\'baC\'a1\'a2.NET\'a1\'a2Java\'a1\'a2SQL\par
+\'d6\'a7\'b3\'d6\'c8\'ed\'bc\'fe\par
+\par
+\'c8\'ed\'bc\'fe\'a3\'baOpenOffice\'a1\'a2Microsoft Excel\'a1\'a2MATLAB\'a1\'a2R\par
+10\'bf\'c9\'bc\'c6\'cb\'e3\'ca\'fd\'be\'dd\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'c4\'d2\'c0\'a8\'c1\'cb\'b4\'f3\'c1\'bf\'bf\'c9\'c1\'a2\'bc\'b4\'bc\'c6\'cb\'e3\'b5\'c4\'ca\'fd\'be\'dd\'a1\'a3\'d3\'c3\'bb\'a7\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fd\'b1\'e0\'b3\'cc\'b7\'c3\'ce\'ca\'d5\'e2\'d0\'a9\'ca\'fd\'be\'dd\'a3\'ac\'b2\'a2\'c7\'d2\'d2\'b2\'bf\'c9\'d2\'d4\'cd\'a8\'b9\'fdWolfram Research\'b5\'c4\'ca\'fd\'be\'dd\'b7\'fe\'ce\'f1\'c6\'f7\'d7\'d4\'b6\'af\'b8\'fc\'d0\'c2\'ca\'fd\'be\'dd\'a1\'a3[3] \'c4\'b3\'d0\'a9\'ca\'fd\'be\'dd\'c8\'e7\'b9\'c9\'c6\'b1\'bc\'db\'b8\'f1\'ba\'cd\'cc\'ec\'c6\'f8\'ca\'fd\'be\'dd\'b6\'bc\'ca\'c7\'ca\'b5\'ca\'b1\'b5\'dd\'cb\'cd\'b5\'c4\'a1\'a3\par
+\'ca\'fd\'be\'dd\'bc\'af\'b0\'fc\'c0\'a8\'a3\'ba\par
+\'cc\'ec\'ce\'c4\'ca\'fd\'be\'dd\'a3\'ba155,000\'b8\'f6\'cc\'ec\'cc\'e5\'b5\'c499\'b8\'f6\'ca\'f4\'d0\'d4\par
+\'bb\'af\'d1\'a7\'ca\'fd\'be\'dd\'a3\'ba34,000\'b8\'f6\'bb\'af\'ba\'cf\'ce\'ef\'b5\'c4111\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac118\'b8\'f6\'bb\'af\'d1\'a7\'d4\'aa\'cb\'d8\'b5\'c486\'b8\'f6\'ca\'f4\'d0\'d4\'d2\'d4\'bc\'b01000\'b8\'f6\'d1\'c7\'d4\'ad\'d7\'d3\'c1\'a3\'d7\'d3\'b5\'c435\'b8\'f6\'ca\'f4\'d0\'d4\par
+\'b5\'d8\'d4\'b5\'d5\'fe\'d6\'ce\'ca\'fd\'be\'dd\'a3\'ba237\'b8\'f6\'b9\'fa\'bc\'d2\'b5\'c4225\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac\'d2\'d4\'bc\'b0\'c8\'ab\'ca\'c0\'bd\'e7160,000\'b8\'f6\'b3\'c7\'ca\'d0\'b5\'c414\'b8\'f6\'ca\'f4\'d0\'d4\par
+\'bd\'f0\'c8\'da\'ca\'fd\'be\'dd\'a3\'ba186,000\'b8\'f6\'b9\'c9\'c6\'b1\'ba\'cd\'bd\'f0\'c8\'da\'b9\'a4\'be\'df\'b5\'c4\'c0\'fa\'ca\'b7\'ba\'cd\'ca\'b5\'ca\'b1\'ca\'f4\'d0\'d4\par
+\'ca\'fd\'d1\'a7\'ca\'fd\'be\'dd\'a3\'ba187\'d6\'d6\'b6\'e0\'c3\'e6\'cc\'e5\'b5\'c489\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac3000\'d6\'d6\'cd\'bc\'b5\'c4258\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac6\'d6\'d6knots\'b5\'c463\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac21\'d6\'d6\'be\'a7\'b8\'f1\'bd\'e1\'b9\'b9\'b5\'c437\'b8\'f6\'ca\'f4\'d0\'d4\'a3\'ac52\'b8\'f6\'b2\'e2\'b5\'d8\'d1\'a7\'b7\'bd\'b0\'b8\'b5\'c432\'b8\'f6\'ca\'f4\'d0\'d4\par
+\'d3\'ef\'d1\'d4\'ca\'fd\'be\'dd\'a3\'ba149,000\'b8\'f6\'d3\'a2\'d3\'ef\'b5\'a5\'b4\'ca\'b5\'c437\'b8\'f6\'ca\'f4\'d0\'d4\'a1\'a326\'b8\'f6\'c6\'e4\'cb\'fb\'d3\'ef\'d1\'d4\'b5\'c4\'b4\'ca\'b5\'e4\par
+\'c9\'fa\'ce\'ef\'d2\'bd\'d1\'a7\'ca\'fd\'be\'dd\'a3\'ba\'cb\'f9\'d3\'d040,000\'b8\'f6\'c8\'cb\'c0\'e0\'bb\'f9\'d2\'f2\'b5\'c441\'b8\'f6\'ca\'fd\'be\'dd\'a3\'ac27,000\'c0\'e0\'b5\'b0\'b0\'d7\'d6\'ca\'b5\'c430\'b8\'f6\'ca\'f4\'d0\'d4\par
+\'cc\'ec\'c6\'f8\'ca\'fd\'be\'dd\'a3\'ba\'c8\'ab\'c7\'f217,000\'b8\'f6\'c6\'f8\'cf\'f3\'d5\'be\'b5\'c443\'b8\'f6\'ca\'b5\'ca\'b1\'ba\'cd\'c0\'fa\'ca\'b7\'b5\'c4\'b2\'e2\'c1\'bf\'ca\'fd\'be\'dd\par
+Wolfram Alpha\'ca\'fd\'be\'dd\'a3\'ba\'c0\'b4\'d7\'d4Wolfram Alpha\'b5\'c4\'d2\'da\'cd\'f2\'d5\'d7\'ca\'fd\'be\'dd\par
+11\'c6\'bd\'cc\'a8\'bf\'c9\'d3\'c3\'d0\'d4\par
+\'b1\'e0\'bc\'ad\par
+\par
+Mathematica\'bf\'c9\'d2\'d4\'d4\'da\'d0\'ed\'b6\'e0\'b2\'bb\'cd\'ac\'b5\'c4\'c6\'bd\'cc\'a8\'c9\'cf\'d4\'cb\'d0\'d0\'a3\'ac\'b0\'fc\'c0\'a8\'a3\'baLinux\'a1\'a2Apple\'b5\'c4Mac OS X\'d2\'d4\'bc\'b0\'bb\'f9\'d3\'daNT\'b5\'c4Microsoft Windows\'a1\'a3\'cb\'f9\'d3\'d0\'c6\'bd\'cc\'a8\'b6\'bc\'d6\'a7\'b3\'d664\'ce\'bb\'ca\'b5\'cf\'d6\'a1\'a3[4] \'d4\'da6.0.3\'d6\'ae\'c7\'b0\'b5\'c4\'b0\'e6\'b1\'be\'bb\'b9\'d6\'a7\'b3\'d6\'c6\'e4\'cb\'fc\'b2\'d9\'d7\'f7\'cf\'b5\'cd\'b3\'a3\'ac\'b0\'fc\'c0\'a8\'a3\'baSolaris\'a1\'a2AIX\'a1\'a2Convex\'a1\'a2HP-UX\'a1\'a2IRIX\'a1\'a2MS-DOS\'a1\'a2NeXTSTEP\'a1\'a2OS/2\'a1\'a2Ultrix\'ba\'cdWindows Me.\par
+Mathematica\'bc\'d2\'d3\'c3\'b0\'e6\'ca\'c7Microsoft Windows\'a1\'a2Linux\'ba\'cdMac OS X\'a3\'a8Intel\'a3\'a9\'c9\'cf\'b5\'c4\'d2\'bb\'b8\'f632\'ce\'bb\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'a1\'a3\lang2052\par
+}
+ 

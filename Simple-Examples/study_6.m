@@ -1,0 +1,9 @@
+f1=sym('(exp(x)+x)*(x+2)');
+f2=sym('a^3-1');
+f3=sym('1/a^4+2/a^3+3/a^2+4/a+5');
+f4=sym('sin(x)^2+cos(x)^2');
+%collect(f1)
+%expand(f1)
+factor(f2)
+%[m,n]=numden(f3)
+%simplify(f4)

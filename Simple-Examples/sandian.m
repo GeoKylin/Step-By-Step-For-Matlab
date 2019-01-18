@@ -1,0 +1,11 @@
+r1=rand(30,1);r2=rand(30,1);
+x0=-2+(2-(-2))*r1;
+y0=-1+(3-(-1))*r2;
+z0=x0.*exp(-x0.^2-y0.^2);
+uij=-2:0.2:2; vij=-1:0.2:3;
+[xi,yj]=meshgrid(uij,vij);
+z2=griddata(x0,y0,z0,xi,yj,'cubic');
+mesh(xi,yj,z2);
+hold on;
+plot3(x0,y0,z0,'mo');
+hold off;

@@ -1,0 +1,96 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration file="D:\桌面\课外学习\使用学习_Mathmatica\s_win_003.prj" location="D:\桌面\课外学习\使用学习_Mathmatica" name="s_win_003" target="target.mlapps" target-name="应用程序打包">
+    <param.appname>s_win_003</param.appname>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.icon>${PROJECT_ROOT}\s_win_003_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\s_win_003_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\s_win_003_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\s_win_003_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary />
+    <param.description />
+    <param.screenshot>${PROJECT_ROOT}\截图\10.2A.2.JPG</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name>
+      <item>MATLAB</item>
+    </param.products.name>
+    <param.products.id>
+      <item>'1'</item>
+    </param.products.id>
+    <param.products.version>
+      <item>8.4</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}\s_win_003.mlappinstall</param.output>
+    <param.guid />
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.platforms />
+      <param.guid />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\s_win_003.m</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\s_win_003.fig</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="D:\桌面\课外学习\使用学习_Mathmatica" name="s_win_003.mlappinstall" optional="false">D:\桌面\课外学习\使用学习_Mathmatica\s_win_003.mlappinstall</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>F:\122\Mathlab</root>
+      <toolboxes>
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.2</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
